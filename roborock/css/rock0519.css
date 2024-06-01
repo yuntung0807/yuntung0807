@@ -1,0 +1,451 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
+@charset "UTF-8";
+/*  共用樣式調整 */
+body {
+  background: #e3e3e2;
+}
+
+#confetti {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  top: 0;
+  z-index: -1;
+}
+
+form#form1 {
+  position: relative;
+}
+form#form1:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://events.tk3c.com/events_net/events_net/rock202206/images/20230519/bg.png") repeat-y center;
+  background-size: 100% auto;
+  background-position: 0 0, top;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  top: 0;
+}
+
+.protitle {
+  width: 60%;
+  height: 180px;
+  font-size: 0;
+}
+.protitle:nth-of-type(1) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/rock202206/images/20230519/F_title03.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(2) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/rock202206/images/20230519/F_title04.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(3) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/rock202206/images/20230519/F_title05.png") no-repeat center;
+  background-size: 100% auto;
+}
+
+.bg01 {
+  background: #efd988;
+  border-radius: 25px;
+  padding: 2%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 3px solid #fff;
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(3, 3, 3, 0.7);
+          box-shadow: 0px 4px 10px 0px rgba(3, 3, 3, 0.7);
+}
+
+.aside-container .go-top {
+  background: #000000b8;
+}
+.aside-container .aside-content li a:hover {
+  background: red;
+}
+
+section {
+  width: 60%;
+}
+section .title {
+  width: 60%;
+  height: auto;
+  margin: 0 auto 2%;
+}
+section li.no a {
+  pointer-events: none;
+  cursor: auto;
+}
+section li.no a:hover {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: none;
+  transition: none;
+}
+
+.store {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto 3%;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+}
+.store:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 10%;
+  z-index: -1;
+}
+
+/* 石頭品牌慶頁面區 */
+#rock-container {
+  width: 100%;
+  margin: 0 auto 0;
+  position: relative;
+}
+#rock-container .background {
+  background-image: url("https://events.cdn-tkec.tw/events_net/events_net/rock202206/images/20230519/kv.png");
+  background-repeat: no-repeat;
+  background-position: 0 0, top;
+  background-size: 100% auto;
+  padding-bottom: 36.8%;
+  width: 100%;
+  height: 0;
+  position: relative;
+  margin: 0 auto 0;
+  background-position: 0 45px, top;
+  padding-bottom: 40%;
+}
+#rock-container .background .logo {
+  width: 6%;
+  height: auto;
+  display: block;
+  position: absolute;
+  left: 14%;
+  top: 45px;
+}
+#rock-container .background .time {
+  width: 10%;
+  position: absolute;
+  right: 20%;
+  top: 12%;
+}
+#rock-container .background .title {
+  width: 35%;
+  position: absolute;
+  left: 24%;
+  margin: 0 auto;
+  top: 10%;
+  -webkit-animation: flipX 1.5s linear;
+          animation: flipX 1.5s linear;
+}
+#rock-container .background .title:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/ASUS202211/images/light.png") no-repeat;
+  width: 80%;
+  height: 100%;
+  -webkit-animation: righttoleft 3s infinite;
+          animation: righttoleft 3s infinite;
+  left: -10%;
+  top: 17%;
+  background-size: 50% auto;
+}
+#rock-container .background .product {
+  width: 30%;
+  position: absolute;
+  right: 13%;
+  top: 24%;
+  -webkit-animation: move-to-left2 2s linear;
+          animation: move-to-left2 2s linear;
+}
+#rock-container .background .bonus {
+  width: 10%;
+  position: absolute;
+  left: 48%;
+  top: 47%;
+  -webkit-animation: upAndDown 1.6s linear infinite alternate;
+          animation: upAndDown 1.6s linear infinite alternate;
+}
+
+.all-box .card {
+  width: 24%;
+  position: absolute;
+  right: 1%;
+  top: 14%;
+}
+.all-box .alert {
+  margin-bottom: 3%;
+}
+.all-box .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.all-box .content a {
+  width: 48%;
+  margin: 0 1%;
+}
+
+.gift-box .gift {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.gift-box .gift .link {
+  width: 49%;
+  height: 23vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/*  電腦版其他尺寸 */
+@media screen and (max-width: 1440px) {
+  #rock-container .background {
+    padding-bottom: 43%;
+  }
+  #rock-container .background .time {
+    top: 14%;
+  }
+}
+@media screen and (max-width: 1145px) {
+  section {
+    width: 80%;
+  }
+
+  .store a:hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .gift-box .gift .link {
+    height: 30vw;
+  }
+}
+@media only screen and (max-width: 992px) {
+  section {
+    width: 95%;
+  }
+  section .title {
+    width: 90%;
+  }
+
+  #rock-container .background {
+    padding-bottom: 55%;
+    background-size: 120% auto;
+    background-position: -14vmax 5vmax, top;
+  }
+  #rock-container .background .logo {
+    width: 8%;
+    left: 4%;
+  }
+  #rock-container .background .title {
+    width: 45%;
+    top: 13%;
+    left: 11%;
+  }
+  #rock-container .background .product {
+    width: 35%;
+    top: 26%;
+  }
+  #rock-container .background .time {
+    width: 12%;
+    right: 20%;
+    top: 16%;
+  }
+  #rock-container .background .bonus {
+    width: 12%;
+    left: 42%;
+    top: 48%;
+  }
+
+  .all-box .card {
+    top: 18.5%;
+  }
+
+  .protitle {
+    width: 90%;
+  }
+
+  .gift-box .gift .link {
+    height: 35vw;
+  }
+
+  .store {
+    width: 95%;
+  }
+
+  form#form1:before {
+    background-size: 160% auto;
+    background-position: -30vmin 0, top;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 850px) {
+  #rock-container .background {
+    background-position: -9vmax 3vmax, top;
+  }
+}
+/* 手機版 */
+@media only screen and (max-width: 768px) {
+  #rock-container .background {
+    background-position: -14vmin 6vmin, top;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 600px) {
+  body:before {
+    background-size: 130% auto;
+  }
+
+  .protitle {
+    height: 140px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .fix_btn {
+    display: block;
+  }
+  .fix_btn .dropdown-menu {
+    display: none;
+  }
+
+  #rock-container .background {
+    padding-bottom: 144%;
+    background-size: 351% auto;
+    background-position: -169vmin 10vmin, top;
+  }
+  #rock-container .background .logo {
+    width: 15%;
+    left: 0;
+  }
+  #rock-container .background .title {
+    width: 86%;
+    top: 8%;
+    left: 30px;
+    right: 15%;
+  }
+  #rock-container .background .product {
+    width: 68%;
+    top: 50%;
+    right: -25%;
+    left: 0;
+    margin: 0 auto;
+  }
+  #rock-container .background .time {
+    width: 20%;
+    top: 11%;
+    right: 5%;
+  }
+  #rock-container .background .bonus {
+    width: 27%;
+    left: 6%;
+    top: 47%;
+    z-index: 2;
+}
+  
+
+  .protitle {
+    width: 100%;
+    height: 100px;
+  }
+
+  section {
+    margin: 0 auto 8%;
+  }
+  section .title {
+    width: 100%;
+  }
+
+  .item {
+    display: none !important;
+  }
+
+  .all-box .card {
+    top: 19.5%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #rock-container .background .time {
+    top: 13%;
+  }
+
+  .protitle {
+    height: 80px;
+  }
+}
+@-webkit-keyframes light-slow-move {
+  40% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+}
+@keyframes light-slow-move {
+  40% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes move-to-left2 {
+  0% {
+    -webkit-transform: translateX(300%);
+            transform: translateX(300%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes move-to-left2 {
+  0% {
+    -webkit-transform: translateX(300%);
+            transform: translateX(300%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
