@@ -1,0 +1,310 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
+@charset "UTF-8";
+/*  共用樣式調整 */
+body {
+  background: #29164e;
+}
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0914/bg.png") no-repeat center;
+  background-size: 100% auto;
+  background-position: 0 45px, top;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  top: 0;
+}
+
+.protitle {
+  width: 50%;
+  height: 130px;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0914/F3.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle a {
+  height: auto;
+}
+
+.more {
+  background: #245adb;
+}
+
+.bg01 {
+  background: none;
+  margin: 0 auto 1%;
+}
+
+section {
+  width: 50%;
+}
+section .title {
+  width: 60%;
+  margin: 0 auto 2%;
+}
+
+/*線上3C電器展*/
+#buy3c-container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+#buy3c-container .background {
+  width: 100%;
+  height: 0;
+  position: relative;
+  margin: 0 auto 0;
+  padding-bottom: 30%;
+}
+#buy3c-container .background .title {
+    width: 40%;
+    position: absolute;
+    left: 15%;
+    top: 28%;
+  -webkit-animation: jump-two-time 1.5s linear;
+          animation: jump-two-time 1.5s linear;
+}
+#buy3c-container .background .title img {
+  -webkit-animation: electric-shock 3s linear infinite;
+          animation: electric-shock 3s linear infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+#buy3c-container .background .product {
+    width: 40%;
+    position: absolute;
+    right: 13%;
+    top: 32%;
+}
+
+.all-box li {
+  width: 45%;
+  margin: 0 5px 2%;
+}
+.all-box li.long {
+  width: 90%;
+}
+
+.special-box li {
+  width: 45%;
+  margin: 0 5px 2%;
+}
+.special-box li.long {
+  width: 91%;
+}
+
+.event-box .content {
+  width: 100%;
+  margin: 0 auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.event-box .content .banner1,
+.event-box .content .banner2 {
+  width: 45%;
+  margin: 0 1% 2%;
+}
+
+/*  電腦版其他尺寸 */
+@media screen and (max-width: 1600px) {
+  section .title {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  section .title {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  section {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1145px) {
+  section {
+    width: 90%;
+  }
+
+  .protitle {
+    width: 70%;
+  }
+
+  #buy3c-container .background .title {
+    top: 32%;
+  }
+  #buy3c-container .background .product {
+    top: 45%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  section {
+    width: 95%;
+  }
+
+  #buy3c-container .background {
+    padding-bottom: 40%;
+  }
+  #buy3c-container .background .title {
+    width: 61%;
+    left: -2%;
+    top: 24%;
+  }
+  #buy3c-container .background .product {
+    width: 48%;
+    top: 36%;
+    right: 2%;
+  }
+
+  body:before {
+    background-size: 120% auto;
+    background-position: -9vmax 4vmax, top;
+  }
+
+  .protitle {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 850px) {
+  body:before {
+    background-position: -7vmax 3vmax, top;
+  }
+}
+/* 手機版 */
+@media only screen and (max-width: 768px) {
+  body:before {
+    background-position: -10vmin 5vmin, top;
+  }
+
+  .protitle {
+    height: 115px;
+    line-height: 250%;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 600px) {
+  .protitle {
+    height: 85px;
+    font-size: 215%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .fix_btn {
+    display: block;
+  }
+  .fix_btn .dropdown-menu {
+    display: none;
+  }
+
+  #buy3c-container .background {
+    padding-bottom: 120%;
+  }
+  #buy3c-container .background .title {
+    width: 105%;
+    top: 18%;
+    left: -8%;
+  }
+  #buy3c-container .background .product {
+    top: 53%;
+    width: 97%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  body:before {
+    background-size: 180% auto;
+    background-position: -39vmin 11vmin, top;
+  }
+
+  .protitle {
+    width: 100%;
+    height: 75px;
+    line-height: 270%;
+  }
+
+  section .title {
+    width: 100%;
+    margin: 0 auto 3%;
+  }
+
+  .all-box li {
+    width: 44%;
+    margin: 0 3px 2%;
+  }
+
+  .event-box .content .banner1,
+.event-box .content .banner2 {
+    width: 95%;
+    margin: 0 5px 3%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .protitle {
+    height: 65px;
+    font-size: 160%;
+    line-height: 270%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  body:before {
+    background-position: -39vmin 14vmin, top;
+  }
+
+  #buy3c-container .background .title {
+    top: 15%;
+  }
+
+  .protitle {
+    height: 55px;
+    font-size: 140%;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .protitle {
+    height: 6.5vmax;
+    line-height: 6.8vmax;
+  }
+}
+@-webkit-keyframes slowMove2 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+  }
+  100% {
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+  }
+}
+@keyframes slowMove2 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+  }
+  100% {
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+  }
+}

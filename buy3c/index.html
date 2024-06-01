@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="https://www.tk3c.com/images/headimg.jpg" rel="image_src" />
+
+    <!--FB meta-->
+    <meta property="fb:admins" content="" />
+    <meta property="fb:app_id" content="606825782724291" />
+    <meta property="og:site_name" content="燦坤線上購物" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="3C嗨購新風潮|燦坤線上" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://www.tk3c.com/images/headimg.jpg" />
+    <meta property="og:url" content="https://events.tk3c.com/events_net/live3cEP/index.html" />
+
+    <title>燦坤線上｜超越99瘋狂夜場</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css">
+    <link href="https://events.tk3c.com/events_net/events_net/animation/animate.css" rel="stylesheet" type="text/css" />
+    <link href="https://events.tk3c.com/events_net/events_net/css/template/2022_Style.css" rel="stylesheet" type="text/css" />
+    <link href="https://events.tk3c.com/events_net/events_net/animation/animation.css" rel="stylesheet" type="text/css" />
+    <link href="./buy3c.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://events.cdn-tkec.tw/events_net/events_net/General/js/JQuery@3.6.0/jquery-3.6.0.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="../js/gears_init.js"></script>
+    <script src="https://www.tk3c.com/js/jquery.countdown.pack.js" type="text/javascript"></script>
+    <link rel="shortcut icon" type="image/icon" href="https://events.tk3c.com/events_net/favicon.ico" /><link href="../css/swiper.min.css?2" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <script src="../js/imgjs.js"></script>
+    <script type="text/javascript" src="../js/jquery.appear.js"></script>
+    
+<!--置頂TKEC-->
+<script>
+    function ChkEvent(MainID) {
+      $.ajax({
+        url: "../ashx/ChkEvent.ashx?MainID=" + MainID,
+        type: "POST",
+        dataType: 'text',
+        data: {
+          "url": encodeURI(document.location.toString())
+        },
+        success: function (msg) {
+          if (msg == "0") {
+            location.href = "http://www.tk3c.com";
+          }
+          if (msg == "1") {
+            TopScript();
+          }
+        }
+      });
+    }
+
+    function TopScript() {
+      $.ajax({
+        url: "../top/top.aspx?url=" + encodeURIComponent(location.href),
+        type: "POST",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecTop").html(msg);
+        }
+      });
+    }
+    var WebSiteName = "Yeelight_event";
+    $(document).ready(function () {
+      //M板下方選單右側動態載入
+      $('.fix_btn p a').each(function () {
+        var strjs = 'ProcessGaEvent(WebSiteName,"click","' + $(this).text() + '");'
+        $(this).attr('onclick', strjs);
+      });
+    });
+    $(document).ready(function () {
+      //延遲讀取
+      var clientHitght = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      $('img[lazy="2"]').each(function () {
+        var self = $(this);
+        self.one("appear", function () {
+          //alert("appeared");
+          self.attr("src", self.attr("org"));
+          self.removeAttr("lazy");
+        });
+        self.appear();
+        if (self.offset().top <= clientHitght) {
+          self.trigger('appear');
+        }
+      });
+    });
+  </script>
+  <!-- Swiper-->
+  <script>
+    $(document).ready(function () {
+      var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false,
+          reverseDirection: false
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        }
+      });
+    });
+  </script>
+  <script>
+    ChkEvent(1208)
+  </script>
+  <!-- go top-->
+  <script type="text/javascript">
+    $(function () {
+      $("#gotop").click(function () {
+        jQuery("html,body").animate({
+          scrollTop: 0
+        }, 1000);
+      });
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('#gotop').fadeIn("fast");
+        } else {
+          $('#gotop').stop().fadeOut("fast");
+        }
+      });
+    });
+  </script>
+  <!--銀行區-->
+  <script>
+    $(document).ready(function () {
+      var Today = new Date();
+      var thisyear = Today.getFullYear();
+      var thismonth = '00';
+      if ((Today.getMonth() + 1) <= 9) {
+        thismonth = "0" + (Today.getMonth() + 1);
+      } else {
+        thismonth = "" + (Today.getMonth() + 1);
+      }
+      var filename = thisyear + thismonth;
+      var url = "../events_net/banks/" + filename + "/acbank.html";
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecFooter").html(msg);
+        }
+      });
+    });
+  </script>
+  <script>
+    function GoLineAdd() {
+      $.ajax({
+        url: '../ashx/event/lineadd.ashx',
+        type: "POST",
+        dataType: 'text',
+        cache: false,
+        success: function (msg) {
+          if (msg == "1") {
+            window.open("https://www.tk3c.com/member/event_lineadd.aspx");
+          } else if (msg == "3") {
+            $.ajax({
+              url: '../ashx/flash/GetWebSite.ashx',
+              type: "POST",
+              data: {
+                "url": encodeURI(document.location.toString())
+              },
+              dataType: 'text',
+              cache: false,
+              success: function (msg) {
+                alert('尚未登入會員，請先登入會員');
+                location.href = "https://www.tk3c.com/member/member_login.aspx?done=" + msg;
+              }
+            });
+          } else {
+            alert(msg);
+          }
+        }
+      });
+    }
+  </script>
+  <!--選單固定效果-->
+  <script>
+    $(window).load(function () {
+      $.ajax({
+        url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js',
+        type: "POST",
+        dataType: 'script',
+        success: function () {
+          $("#btnBox03").sticky({
+            topSpacing: 0
+          });
+        }
+      });
+    });
+  </script>
+  <!--選單ping住後更換底圖的效果 記得前面要有function-->
+  <script type="text/javascript">
+    $(function () {
+      var top = $('#btnBox03').offset().top;
+      $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y >= top) {
+          $('body').addClass('fixing');
+        } else {
+          $('body').removeClass('fixing');
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    function myFunction(btn) {
+      if (btn == 'btn2') {
+        document.getElementById("btn_02").className = "btn_02a";
+      } else {
+        document.getElementById("btn_02").className = "btn_02";
+      }
+    }
+  </script>
+
+  <script>
+    $.ajax({
+      url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/1.0.0/jquery.scrolldepth.min.js',
+      type: "POST",
+      dataType: 'script',
+      success: function () {
+        jQuery(function () {
+          jQuery.scrollDepth({
+            pixelDepth: false,
+            gtmOverride: true
+          });
+        });
+      }
+    });
+  </script>
+
+</head>
+
+<body class="fixing">
+
+
+  <form name="form1" method="post" action="./index.aspx?mainid=1208&amp;preview=" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+      value="/wEPDwUKLTczMjE4MTE1OWRkW2rODVNy2ilhKyCCjauhi6SIYCg=">
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA7D2EC1">
+    <div id="TkecTop" style="height: 45px;">
+
+
+      <div id="PnTop">
+
+        <script>
+          var url = document.location.toString();
+          var arrUrl = url.split("?");
+          var fbhtml_url = arrUrl[0];
+        </script>
+
+
+
+
+        <!--活動頁上方灰bar st--->
+        <style>
+          #TopNum {
+            display: none;
+          }
+
+          #kuai3header {
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 999;
+            background: #494949;
+            height: 45px;
+            line-height: 45px;
+          }
+
+          #kuai3header .words {
+            margin: 0 auto;
+            max-width: 1144px;
+          }
+
+          #kuai3header .words h1.logo {
+            background: url(https://events.tkec.com.tw/events_net/events_net/top/images/header-home-new.svg?2) no-repeat;
+            width: 219px;
+            height: 35px;
+            display: inline-block;
+            text-indent: -9999px;
+            white-space: nowrap;
+            overflow: hidden;
+            float: left;
+            margin: 5px 10px;
+          }
+
+          #kuai3header .words ul.font {
+            /*float: right;*/
+            line-height: 45px;
+            display: block;
+            z-index: 99999;
+            list-style: none;
+            margin: 0;
+            height: 45px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          #kuai3header .words ul.font li {
+            width: auto;
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            display: inline-block;
+            text-align: right;
+            overflow: hidden;
+            flex-shrink: 0;
+          }
+
+          #kuai3header .words ul.font li>a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            border-right: 1px solid #fff;
+            padding: 0 8px;
+            letter-spacing: 1px;
+            width: auto;
+          }
+
+          li.newsale a {
+            color: #FDFF00 !important;
+            line-height: 40px;
+          }
+
+          li.newsale a>b {
+            background: #FDFF00;
+            color: #494949;
+            border-radius: 5px;
+            padding: 0 2%;
+            font-size: 10px;
+            margin-right: 5px;
+          }
+
+          li.newsale a:after {
+            content: "▶";
+            margin-left: 5px;
+            font-size: 80%;
+          }
+
+          @media (max-width: 750px) {
+            .TkecTop .menu {
+              width: 100%;
+              background: #494949;
+              background: rgba(73, 73, 73, 0.95);
+              float: none;
+              overflow: hidden;
+              z-index: 99999;
+              max-height: 0;
+              position: absolute;
+              top: 44px;
+              right: 0;
+              left: 0;
+              -webkit-transition: max-height 1s;
+              -o-transition: max-height 1s;
+              transition: max-height 1s;
+            }
+
+            .TkecTop .menu li {
+              float: none;
+            }
+
+            .TkecTop .menu li:active {
+              background: rgba(120, 120, 120, 0.4);
+            }
+
+            .TkecTop .menu a {
+              height: 45px;
+              border: 0;
+              width: 100%;
+              display: block;
+            }
+          }
+
+          .menu-show .menu {
+            max-height: 480px;
+          }
+
+          #showmenu {
+            color: #FFF;
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            width: 30px;
+            height: 30px;
+          }
+
+          #showmenu span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            top: 50%;
+            margin-top: -1px;
+            left: 50%;
+            margin-left: -10px;
+            -webkit-transition: background 0.3s;
+            -o-transition: background 0.3s;
+            transition: background 0.3s;
+          }
+
+          #showmenu span:before,
+          #showmenu span:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: -webkit-transform 0.3s, background 0s;
+            -webkit-transition: background 0s, -webkit-transform 0.3s;
+            transition: background 0s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s, -webkit-transform 0.3s;
+          }
+
+          #showmenu span:before {
+            top: -6px;
+          }
+
+          #showmenu span:after {
+            bottom: -6px;
+          }
+
+
+          /*瀏覽區域的寬度小於750像素*/
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            #showmenu {
+              display: block;
+            }
+
+            #kuai3header .words ul.font li {
+              width: 100%;
+              display: block;
+              text-align: left;
+            }
+
+            #kuai3header .words ul.font li>a {
+              border-right: 0px solid #fff;
+              font-size: 90%;
+            }
+
+            li.newsale a>b {
+              padding: 0.5% 2%;
+            }
+
+            #kuai3header .words .font {
+              display: block !important;
+            }
+
+            #kuai3header .words ul.font {
+              height: auto;
+            }
+          }
+        </style>
+        <div id="kuai3header" class="TkecTop">
+          <div class="words">
+            <a href="https://www.tk3c.com/">
+              <h1 class="logo">燦坤線上購物</h1>
+            </a>
+            <span id="TopNum">26</span>
+            <ul class="font menu">
+
+              <li>
+                <a
+                  href="https://www.tk3c.com/member/member_login.aspx?done=WApIh9eSlBzFKZwcxiTZIQaGmOZZfZ/NrsejS0CcqzdZfjZpP/v6tI5gNxJPSBU1Z5MwogBeliDnhjmd8epkqA==">會員登入</a>
+              </li>
+              <li><a href="https://www.tk3c.com/member/member_center.aspx">會員中心</a></li>
+              <li><a href="https://www.tk3c.com/service/serviceindex.aspx">客服中心</a></li>
+              <li><a href="javascript:void(0);"
+                  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">FB分享</a>
+              </li>
+            </ul>
+            <div id="showmenu" class="menu-is-open"><span></span></div>
+          </div>
+        </div>
+        <script>
+          /*
+                $(document).ready(function () {
+                    $('#showmenu').click(function (e) {
+                        e.preventDefault();
+                        $('body').toggleClass('menu-show');
+                        $(this).toggleClass('menu-is-open');
+                    });
+                });
+                */
+
+          function domReady(fn) {
+            // If early
+            document.addEventListener("DOMContentLoaded", fn);
+            // If late
+            if (document.readyState === "interactive" || document.readyState === "complete") {
+              fn();
+            }
+          }
+
+          function regTopBarMenu() {
+            document.getElementById('showmenu').addEventListener('click', function (e) {
+              e.preventDefault();
+              var body = document.querySelector('body');
+              if (body.classList.contains('menu-show')) {
+                body.classList.remove('menu-show');
+              } else {
+                body.classList.add('menu-show');
+              }
+
+              var menuBtn = e.target;
+              if (menuBtn.classList.contains('menu-is-open')) {
+                menuBtn.classList.remove('menu-is-open');
+              } else {
+                menuBtn.classList.add('menu-is-open');
+              }
+            });
+          }
+          domReady(regTopBarMenu);
+        </script>
+
+      </div>
+
+    </div>
+    <div id="gotop" onclick="ProcessGaEvent(WebSiteName,'click','Top')" style="display: none; opacity: 1;">
+      <img src="../events_net/Yeelight_event/images/scroll-top.png">
+    </div>
+    <div class="fix_btn">
+      <!-- The dropdown menu begins -->
+      <div class="sample-menu-style dropdown-menu btn1">
+        <span tabindex="0" onclick="return true">商品列表</span>
+        <div tabindex="0" onclick="return true"></div>
+        <ul>
+          <li><a href="#pro2830" onclick="ProcessGaEvent('Yeelight_event','click','2830-智慧燈具');">智慧燈具</a></li>
+          <li><a href="#pro2831" onclick="ProcessGaEvent('Yeelight_event','click','2831-感應燈區');">感應燈區</a></li>
+          <li><a href="#pro2832" onclick="ProcessGaEvent('Yeelight_event','click','2832-電競燈帶');">電競燈帶</a></li>
+          <li><a href="#pro2833" onclick="ProcessGaEvent('Yeelight_event','click','2833-照明檯燈');">照明檯燈</a></li>
+
+        </ul>
+      </div>
+      <!-- End of the dropdown menu -->
+      <!-- 手機版選單 -->
+      <div class="nav-footer">
+        <div class="footer-bg"></div>
+        <div class="nav-box">
+          <ul>
+            <li data-id="1"><span class="icon"><i class="fa-solid fa-shop"></i>精選商品</span></li>
+            <li data-id="2"><span class="icon"><i class="fa-solid fa-people-arrows"></i>關注社群</span></li>
+          </ul>
+        </div>
+        <div class="box-area type">
+          <ul></ul>
+        </div>
+
+        <div class="box-area social">
+          <ul>
+            <li><a href="https://reurl.cc/QbZ149" target="_blank"><i class="fa-brands fa-meta"></i></a></li>
+            <li><a href="https://reurl.cc/7pMZVl" target="_blank"><i class="fa-brands fa-line"></i></a></li>
+            <li><a href="https://reurl.cc/3Ye8kX" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- go top -->
+      <a class="gotop-mobile"></a>
+
+    </div>
+    <div class="wrapper">
+                  
+                    
+<!-- 主視覺 -->                    
+<div id="buy3c-container">
+  <div class="background">
+    <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/live3cEP/images/0914/title.png">
+    </h2>
+    <p class="product animate__animated animate__bounceInRight">
+      <img src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0914/product.png">
+    </p>
+  </div>
+
+
+  <section class="special-box">
+    <h2 class="title"><img src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0914/F1.png">
+    </h2>
+
+    <ul>
+      <li class="flip long"></li>
+      <li><a href="https://www.tk3c.com/dictitleurl.aspx?cid=117913" target="_blank"><img
+            src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0914/C3.png"></a></li>
+      <li><a href="https://www.tk3c.com/dic1.aspx?cid=121808&aid=23614" target="_blank"><img
+            src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0914/C4.gif"></a></li>
+      <li><a href="https://www.tk3c.com/dictitleurl.aspx?cid=11124" target="_blank"><img
+            src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0914/C5.png"></a></li>
+      <li><a href="https://www.tk3c.com/dictitleurl.aspx?cid=19729" target="_blank"><img
+            src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0914/C6.png"></a></li>
+      <li><a href="https://www.tk3c.com/dictitleurl.aspx?cid=11124" target="_blank"><img
+            src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0914/C7.png"></a></li>
+      <li class="short"></li>
+    </ul>
+  </section>
+
+
+  <!-- 全站 -->
+  <section class="all-box">
+    <h2 class="title"><img src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0914/F2.png">
+    </h2>
+
+    <ul>
+      <li><a href="https://events.tk3c.com/events_net/5ius7pibrave/index.html#pro07" target="_blank"> <img src="https://events.cdn-tkec.tw/events_net/events_net/23_99shopping/images/sp09.png"></a></li>
+      <li><a href="https://events.tk3c.com/events_net/5ius7pibrave/index.html#pro07" target="_blank"> <img src="https://events.cdn-tkec.tw/events_net/events_net/23_99shopping/images/sp10.png"></a></li>
+      <li class="long"><a href="https://www.facebook.com/TDdd331"> <img
+            src="https://events.cdn-tkec.tw/events_net/events_net/23_99shopping/images/sp07b.png"></a></li>
+    </ul>
+  </section>
+
+  <!-- 活動 -->
+  <section class="event-box">
+    <div class="content">
+      <div class="banner1"></div>
+      <div class="banner2"></div>
+    </div>
+  </section>
+
+</div>
+
+
+<!-- 右側選單 -->
+<aside class="aside-container">
+  <span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+  <div class="aside-wrap">
+    <h3 class="aside-header"></h3>
+    <div class="aside-content">
+      <ul>
+
+      </ul>
+    </div>
+    <a href="#" class="go-top">GO TOP</a>
+  </div>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@5.4.5/js/swiper.min.js"></script>
+<script src="https://events.tk3c.com/events_net/events_net/js/common.js"></script>
+
+<!-- 手機版選單 JS -->
+<script src="https://events.tk3c.com/events_net/events_net/js/mobile_nav_go.js"></script>
+<script src="./buy3c.js"></script>
+                
+        </div>
+        <div class="itemBox m_version_non">
+            <div id="btnBox03">
+                <div class="upbox">
+                    <a href="#pro3717" class="navi_bar btn_01 p01" onClick = "ProcessGaEvent('202211_Logitech','click','3717-指定品登錄送 Belkin耳機')">指定品登錄送 Belkin耳機</a>
+<a href="#pro3718" class="navi_bar btn_01 p01" onClick = "ProcessGaEvent('202211_Logitech','click','3718-高效辦公 無往不利')">高效辦公 無往不利</a>
+<a href="#pro3719" class="navi_bar btn_01 p01" onClick = "ProcessGaEvent('202211_Logitech','click','3719-時尚辦公 魅力無限')">時尚辦公 魅力無限</a>
+<a href="#pro3720" class="navi_bar btn_01 p01" onClick = "ProcessGaEvent('202211_Logitech','click','3720-人體工學 超舒適手感')">人體工學 超舒適手感</a>
+<a href="#pro3721" class="navi_bar btn_01 p01" onClick = "ProcessGaEvent('202211_Logitech','click','3721-靜音升級 無聲勝有聲')">靜音升級 無聲勝有聲</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="rightbtn">
+            <div class="actbtn">
+                <a href="#pro3717" class="btn_01 p01" onClick = "ProcessGaEvent('202211_Logitech','click','3717-指定品登錄送 Belkin耳機')">指定品登錄送 Belkin耳機</a>
+<a href="#pro3718" class="btn_01 p01" onClick = "ProcessGaEvent('202211_Logitech','click','3718-高效辦公 無往不利')">高效辦公 無往不利</a>
+<a href="#pro3719" class="btn_01 p01" onClick = "ProcessGaEvent('202211_Logitech','click','3719-時尚辦公 魅力無限')">時尚辦公 魅力無限</a>
+<a href="#pro3720" class="btn_01 p01" onClick = "ProcessGaEvent('202211_Logitech','click','3720-人體工學 超舒適手感')">人體工學 超舒適手感</a>
+<a href="#pro3721" class="btn_01 p01" onClick = "ProcessGaEvent('202211_Logitech','click','3721-靜音升級 無聲勝有聲')">靜音升級 無聲勝有聲</a>
+
+            </div>
+        </div>
+        <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+        <div class="wrapper">
+            
+            
+                    <h2 class="protitle"><a name="pro3717" id="pro3717"></a>指定品登錄送 Belkin耳機</h2>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+<div class="list_F bg01">
+		<ul>
+            
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=202090&ec=202211_Logitech" id="prod202090" name="prod202090"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201909/202090_M.jpg?t=20220331233449" border="0" /></p>
+		<storg>羅技 Logitech MX Keys 智能鍵盤</storg>
+		<h4>領券現折$211 ↘↘</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>75</span>折</p>
+		<strong class="txt_red fred"> <em>市價$3990</em> <i>活動價$</i>2990 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=223944&ec=202211_Logitech" id="prod223944" name="prod223944"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202112/223944_M.jpg?t=20221102170119" border="0" /></p>
+		<storg>羅技Logitech Combo Touch 鍵盤保護殼 附觸控式軌跡板 11'' 注音版</storg>
+		<h4>送三好禮，登錄再送藍牙耳機！！！</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>84</span>折</p>
+		<strong class="txt_red fred"> <em>市價$5990</em> <i>活動價$</i>4990 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=221963&ec=202211_Logitech" id="prod221963" name="prod221963"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202110/221963_M.jpg?t=20220509144600" border="0" /></p>
+		<storg>羅技 Logitech MX Keys Mini 無線鍵盤 簡約白</storg>
+		<h4>領券現折$211 ↘↘</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>73</span>折</p>
+		<strong class="txt_red fred"> <em>市價$3990</em> <i>活動價$</i>2890 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=205985&ec=202211_Logitech" id="prod205985" name="prod205985"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202002/205985_M.jpg?t=20220331233256" border="0" /></p>
+		<storg>羅技 Logitech MX Vertical 垂直滑鼠</storg>
+		<h4></h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>76</span>折</p>
+		<strong class="txt_red fred"> <em>市價$3290</em> <i>活動價$</i>2490 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=219904&ec=202211_Logitech" id="prod219904" name="prod219904"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202108/219904_M.jpg?t=20220331233100" border="0" /></p>
+		<storg>羅技 Logitech POP KEYS無線鍵盤 夢幻紫</storg>
+		<h4>領券現折$211 ↘↘</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>74</span>折</p>
+		<strong class="txt_red fred"> <em>市價$2690</em> <i>活動價$</i>1990 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=219903&ec=202211_Logitech" id="prod219903" name="prod219903"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202108/219903_M.jpg?t=20220331233136" border="0" /></p>
+		<storg>羅技 Logitech POP KEYS無線鍵盤 酷玩黃</storg>
+		<h4>領券現折$211 ↘↘</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>74</span>折</p>
+		<strong class="txt_red fred"> <em>市價$2690</em> <i>活動價$</i>1990 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=220047&ec=202211_Logitech" id="prod220047" name="prod220047"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202108/220047_M.jpg?t=20220331233044" border="0" /></p>
+		<storg>羅技 Logitech POP KEYS無線鍵盤 魅力桃</storg>
+		<h4>領券現折$211 ↘↘</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>74</span>折</p>
+		<strong class="txt_red fred"> <em>市價$2690</em> <i>活動價$</i>1990 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=232448&ec=202211_Logitech" id="prod232448" name="prod232448"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202208/232448_M.jpg?t=20220830143015" border="0" /></p>
+		<storg>羅技MX Master 3S無線滑鼠-黑</storg>
+		<h4></h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>77</span>折</p>
+		<strong class="txt_red fred"> <em>市價$4290</em> <i>活動價$</i>3290 </strong> </div></a></li>
+                		
+
+		</ul>
+	</div>
+                    
+                    
+                    
+                
+                    <h2 class="protitle"><a name="pro3718" id="pro3718"></a>高效辦公 無往不利</h2>
+                    
+                    
+                    
+                    
+                    <div id="RTProd_ctl01_ProdUc31_SuperDiv" class="list_M bg01">
+		<div class="hotpro_wrapper">
+                
+			<div id="RTProd_ctl01_ProdUc31_RtProdTop_ctl00_PnCss" class="hotproboxL">
+                <a id="prod211595" name="prod211595"></a>
+				<div class="hotpro_pro">
+				<div class="hotpro_pic"><p class="icon_number">還剩<span>12</span>組</p><img id="RTProd_ctl01_ProdUc31_RtProdTop_ctl00_Img" onerror="ImgError(this);" org="https://www.cdn-tkec.tw/image/product/202009/211595_M.jpg?t=20220509144827" lazy="2" src="https://events.cdn-tkec.tw/events_net/events_net/blank.png" border="0" /></div>
+				<div class="hotpromain">
+<div class="hotpro_sale">領券現折$211 ↘↘</div>
+<div class="hotpro_name">羅技 Logitech MX Anywhere 3 無線滑鼠 石墨灰</div>
+				<div class="hotpro_info"><span>・
+    無線滑鼠2.4GH<br></span>
+<span>・
+    藍牙4.0<br></span>
+<span>・
+    金屬滾輪<br></span>
+<span>・
+    充電式滑鼠<br></span>
+</div>
+				<div class="hotpro_price1 fred">$2990</div>
+                <div class="hotpro_price2">活動價$<span>2290</span></div>								
+				<a href="http://www.tk3c.com/pt.aspx?pid=211595&ec=202211_Logitech"><div class="buybtn">前往購買</div></a>
+				</div>
+				</div>
+			</div>
+                
+			<div id="RTProd_ctl01_ProdUc31_RtProdTop_ctl01_PnCss" class="hotproboxR">
+                <a id="prod211594" name="prod211594"></a>
+				<div class="hotpro_pro">
+				<div class="hotpro_pic"><p class="icon_number">還剩<span>20</span>組</p><img id="RTProd_ctl01_ProdUc31_RtProdTop_ctl01_Img" onerror="ImgError(this);" org="https://www.cdn-tkec.tw/image/product/202009/211594_M.jpg?t=20220509144841" lazy="2" src="https://events.cdn-tkec.tw/events_net/events_net/blank.png" border="0" /></div>
+				<div class="hotpromain">
+<div class="hotpro_sale">領券現折$211 ↘↘</div>
+<div class="hotpro_name">羅技 Logitech MX Anywhere 3 無線滑鼠 玫瑰粉</div>
+				<div class="hotpro_info"><span>・
+    無線滑鼠2.4GH<br></span>
+<span>・
+    藍牙4.0<br></span>
+<span>・
+    金屬滾輪<br></span>
+<span>・
+    充電式滑鼠<br></span>
+</div>
+				<div class="hotpro_price1 fred">$2990</div>
+                <div class="hotpro_price2">活動價$<span>2290</span></div>								
+				<a href="http://www.tk3c.com/pt.aspx?pid=211594&ec=202211_Logitech"><div class="buybtn">前往購買</div></a>
+				</div>
+				</div>
+			</div>
+                 			
+		</div>
+		<div class="list_special"> 
+		  <ul>
+              
+			<li><a href="http://www.tk3c.com/pt.aspx?pid=211596&ec=202211_Logitech" id="prod211596" name="prod211596">
+			  <p class="item_img"><img id="RTProd_ctl01_ProdUc31_RTProd_ctl00_Img" onerror="ImgError(this);" org="https://www.cdn-tkec.tw/image/product/202009/211596_M.jpg?t=20220509144811" lazy="2" src="https://events.cdn-tkec.tw/events_net/events_net/blank.png" border="0" /></p>
+          <h4>領券現折$211 ↘↘</h4>
+          <storg>羅技 Logitech MX Anywhere 3 無線滑鼠 珍珠白</storg>
+			  <div class="box_price">
+			  <p class="icon_pro"><span>77</span>折</p>
+                <strong class="txt_red fred"> <em>$2990</em> <i>活動價</i>2290</strong> </div>				
+			  </a></li>		                  
+                  
+			<li><a href="http://www.tk3c.com/pt.aspx?pid=181058&ec=202211_Logitech" id="prod181058" name="prod181058">
+			  <p class="item_img"><img id="RTProd_ctl01_ProdUc31_RTProd_ctl01_Img" onerror="ImgError(this);" org="https://www.cdn-tkec.tw/image/product/201710/181058_M.jpg?t=20220208105301" lazy="2" src="https://events.cdn-tkec.tw/events_net/events_net/blank.png" border="0" /></p>
+          <h4>領券現折$211 ↘↘</h4>
+          <storg>羅技 Logitech MX Ergo 無線軌跡球</storg>
+			  <div class="box_price">
+			  <p class="icon_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>$3299</em> <i>活動價</i>2799</strong> </div>				
+			  </a></li>		                  
+                  
+			<li><a href="http://www.tk3c.com/pt.aspx?pid=221962&ec=202211_Logitech" id="prod221962" name="prod221962">
+			  <p class="item_img"><img id="RTProd_ctl01_ProdUc31_RTProd_ctl02_Img" onerror="ImgError(this);" org="https://www.cdn-tkec.tw/image/product/202110/221962_M.jpg?t=20220509144617" lazy="2" src="https://events.cdn-tkec.tw/events_net/events_net/blank.png" border="0" /></p>
+          <h4>領券現折$211 ↘↘</h4>
+          <storg>羅技 Logitech MX Keys Mini 無線鍵盤 簡約黑</storg>
+			  <div class="box_price">
+			  <p class="icon_pro"><span>73</span>折</p>
+                <strong class="txt_red fred"> <em>$3990</em> <i>活動價</i>2890</strong> </div>				
+			  </a></li>		                  
+                  
+			<li><a href="http://www.tk3c.com/pt.aspx?pid=218064&ec=202211_Logitech" id="prod218064" name="prod218064">
+			  <p class="item_img"><img id="RTProd_ctl01_ProdUc31_RTProd_ctl03_Img" onerror="ImgError(this);" org="https://www.cdn-tkec.tw/image/product/202105/218064_M.jpg?t=20220331233648" lazy="2" src="https://events.cdn-tkec.tw/events_net/events_net/blank.png" border="0" /></p>
+          <h4>領券現折$211 ↘↘</h4>
+          <storg>羅技 Logitech MX Master 2S 無線滑鼠 黑</storg>
+			  <div class="box_price">
+			  
+                <strong class="txt_red fred"> <em>$3290</em> <i>活動價</i>3290</strong> </div>				
+			  </a></li>		                  
+                  
+		  </ul>
+		</div>
+	</div>
+                    
+                    
+                    
+                    
+                    
+                
+                    <h2 class="protitle"><a name="pro3719" id="pro3719"></a>時尚辦公 魅力無限</h2>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+<div class="list_F bg01">
+		<ul>
+            
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=210679&ec=202211_Logitech" id="prod210679" name="prod210679"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202008/210679_M.jpg?t=20200824144858" border="0" /></p>
+		<storg>羅技 Logitech 時尚美型藍牙鍵鼠禮盒組｜K380 多工藍牙鍵盤 + Pebble M350 鵝卵石無線滑鼠 玫瑰粉</storg>
+		<h4>強檔組合↘售完不補</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>85</span>折</p>
+		<strong class="txt_red fred"> <em>市價$1759</em> <i>活動價$</i>1490 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=200554&ec=202211_Logitech" id="prod200554" name="prod200554"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201907/200554_M.jpg?t=20211124173824" border="0" /></p>
+		<storg>羅技 Logitech K580 超薄跨平台藍牙鍵盤 石墨黑</storg>
+		<h4>送羅技小鼠墊</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>93</span>折</p>
+		<strong class="txt_red fred"> <em>市價$1290</em> <i>活動價$</i>1190 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=210678&ec=202211_Logitech" id="prod210678" name="prod210678"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202008/210678_M.jpg?t=20200824144912" border="0" /></p>
+		<storg>羅技 Logitech 時尚美型藍牙鍵鼠禮盒組｜K380 多工藍牙鍵盤 + Pebble M350 鵝卵石無線滑鼠 珍珠白</storg>
+		<h4>送羅技小鼠墊</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>85</span>折</p>
+		<strong class="txt_red fred"> <em>市價$1759</em> <i>活動價$</i>1490 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=200552&ec=202211_Logitech" id="prod200552" name="prod200552"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201907/200552_M.jpg?t=20220213194416" border="0" /></p>
+		<storg>羅技 Logitech Pebble M350 鵝卵石無線滑鼠 玫瑰粉</storg>
+		<h4></h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>85</span>折</p>
+		<strong class="txt_red fred"> <em>市價$699</em> <i>活動價$</i>590 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=211877&ec=202211_Logitech" id="prod211877" name="prod211877"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202009/211877_M.jpg?t=20220216153405" border="0" /></p>
+		<storg>羅技 Logitech Pebble M350 鵝卵石無線滑鼠 天空藍</storg>
+		<h4></h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>85</span>折</p>
+		<strong class="txt_red fred"> <em>市價$699</em> <i>活動價$</i>590 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=200553&ec=202211_Logitech" id="prod200553" name="prod200553"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201907/200553_M.jpg?t=20220216153708" border="0" /></p>
+		<storg>羅技 Logitech Pebble M350 鵝卵石無線滑鼠 珍珠白</storg>
+		<h4></h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>85</span>折</p>
+		<strong class="txt_red fred"> <em>市價$699</em> <i>活動價$</i>590 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=200551&ec=202211_Logitech" id="prod200551" name="prod200551"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201907/200551_M.jpg?t=20220213194436" border="0" /></p>
+		<storg>羅技 Logitech Pebble M350 鵝卵石無線滑鼠 石墨灰</storg>
+		<h4></h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>85</span>折</p>
+		<strong class="txt_red fred"> <em>市價$699</em> <i>活動價$</i>590 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=211878&ec=202211_Logitech" id="prod211878" name="prod211878"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202009/211878_M.jpg?t=20220216152645" border="0" /></p>
+		<storg>羅技 Logitech Pebble M350 鵝卵石無線滑鼠 薄荷綠</storg>
+		<h4></h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>85</span>折</p>
+		<strong class="txt_red fred"> <em>市價$699</em> <i>活動價$</i>590 </strong> </div></a></li>
+                		
+
+		</ul>
+	</div>
+                    
+                    
+                    
+                
+                    <h2 class="protitle"><a name="pro3720" id="pro3720"></a>人體工學 超舒適手感</h2>
+                    
+                    
+                    
+                    
+                    <div id="RTProd_ctl03_ProdUc31_SuperDiv" class="list_M bg01">
+		<div class="hotpro_wrapper">
+                
+			<div id="RTProd_ctl03_ProdUc31_RtProdTop_ctl00_PnCss" class="hotproboxL">
+                <a id="prod216169" name="prod216169"></a>
+				<div class="hotpro_pro">
+				<div class="hotpro_pic"><p class="icon_number">還剩<span>7</span>組</p><img id="RTProd_ctl03_ProdUc31_RtProdTop_ctl00_Img" onerror="ImgError(this);" org="https://www.cdn-tkec.tw/image/product/202103/216169_M.jpg?t=20220509144720" lazy="2" src="https://events.cdn-tkec.tw/events_net/events_net/blank.png" border="0" /></div>
+				<div class="hotpromain">
+<div class="hotpro_sale">領券現折$211 ↘↘</div>
+<div class="hotpro_name">羅技 Logitech ERGO K860 人體工學鍵盤</div>
+				<div class="hotpro_info"><span>・
+    人體工學設計<br></span>
+<span>・
+    全尺寸鍵盤，配可調整剪刀腳<br></span>
+<span>・
+    藍牙無線雙模<br></span>
+<span>・
+    24個月電池壽命<br></span>
+</div>
+				<div class="hotpro_price1 fred">$3990</div>
+                <div class="hotpro_price2">活動價$<span>2490</span></div>								
+				<a href="http://www.tk3c.com/pt.aspx?pid=216169&ec=202211_Logitech"><div class="buybtn">前往購買</div></a>
+				</div>
+				</div>
+			</div>
+                
+			<div id="RTProd_ctl03_ProdUc31_RtProdTop_ctl01_PnCss" class="hotproboxR">
+                <a id="prod232445" name="prod232445"></a>
+				<div class="hotpro_pro">
+				<div class="hotpro_pic"><p class="icon_number">還剩<span>35</span>組</p><img id="RTProd_ctl03_ProdUc31_RtProdTop_ctl01_Img" onerror="ImgError(this);" org="https://www.cdn-tkec.tw/image/product/202208/232445_M.jpg?t=20220830143014" lazy="2" src="https://events.cdn-tkec.tw/events_net/events_net/blank.png" border="0" /></div>
+				<div class="hotpromain">
+<div class="hotpro_sale">送羅技小鼠墊</div>
+<div class="hotpro_name">羅技 Logitech LIFT 人體工學垂直無線滑鼠-石墨灰</div>
+				<div class="hotpro_info"><span>・
+    嶄新Logi Bolt 新一代的接收器技術<br></span>
+<span>・
+    持久續航2年電池壽命<br></span>
+<span>・
+    Easy-Swich 功能裝置自由切換<br></span>
+<span>・
+    57度雙認證人體工學設計<br></span>
+</div>
+				<div class="hotpro_price1 fred">$2490</div>
+                <div class="hotpro_price2">活動價$<span>1990</span></div>								
+				<a href="http://www.tk3c.com/pt.aspx?pid=232445&ec=202211_Logitech"><div class="buybtn">前往購買</div></a>
+				</div>
+				</div>
+			</div>
+                 			
+		</div>
+		<div class="list_special"> 
+		  <ul>
+              
+			<li><a href="http://www.tk3c.com/pt.aspx?pid=232447&ec=202211_Logitech" id="prod232447" name="prod232447">
+			  <p class="item_img"><img id="RTProd_ctl03_ProdUc31_RTProd_ctl00_Img" onerror="ImgError(this);" org="https://www.cdn-tkec.tw/image/product/202208/232447_M.jpg?t=20220830143014" lazy="2" src="https://events.cdn-tkec.tw/events_net/events_net/blank.png" border="0" /></p>
+          <h4>送羅技小鼠墊</h4>
+          <storg>羅技 Logitech LIFT 人體工學垂直無線滑鼠-玫瑰粉</storg>
+			  <div class="box_price">
+			  <p class="icon_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>$2490</em> <i>活動價</i>1990</strong> </div>				
+			  </a></li>		                  
+                  
+			<li><a href="http://www.tk3c.com/pt.aspx?pid=232446&ec=202211_Logitech" id="prod232446" name="prod232446">
+			  <p class="item_img"><img id="RTProd_ctl03_ProdUc31_RTProd_ctl01_Img" onerror="ImgError(this);" org="https://www.cdn-tkec.tw/image/product/202208/232446_M.jpg?t=20220830143014" lazy="2" src="https://events.cdn-tkec.tw/events_net/events_net/blank.png" border="0" /></p>
+          <h4>送羅技小鼠墊</h4>
+          <storg>羅技 Logitech LIFT 人體工學垂直無線滑鼠-珍珠白</storg>
+			  <div class="box_price">
+			  <p class="icon_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>$2490</em> <i>活動價</i>1990</strong> </div>				
+			  </a></li>		                  
+                  
+			<li><a href="http://www.tk3c.com/pt.aspx?pid=181058&ec=202211_Logitech" id="prod181058" name="prod181058">
+			  <p class="item_img"><img id="RTProd_ctl03_ProdUc31_RTProd_ctl02_Img" onerror="ImgError(this);" org="https://www.cdn-tkec.tw/image/product/201710/181058_M.jpg?t=20220208105301" lazy="2" src="https://events.cdn-tkec.tw/events_net/events_net/blank.png" border="0" /></p>
+          <h4>領券現折$211 ↘↘</h4>
+          <storg>羅技 Logitech MX Ergo 無線軌跡球</storg>
+			  <div class="box_price">
+			  <p class="icon_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>$3299</em> <i>活動價</i>2799</strong> </div>				
+			  </a></li>		                  
+                  
+			<li><a href="http://www.tk3c.com/pt.aspx?pid=205985&ec=202211_Logitech" id="prod205985" name="prod205985">
+			  <p class="item_img"><img id="RTProd_ctl03_ProdUc31_RTProd_ctl03_Img" onerror="ImgError(this);" org="https://www.cdn-tkec.tw/image/product/202002/205985_M.jpg?t=20220331233256" lazy="2" src="https://events.cdn-tkec.tw/events_net/events_net/blank.png" border="0" /></p>
+          <h4></h4>
+          <storg>羅技 Logitech MX Vertical 垂直滑鼠</storg>
+			  <div class="box_price">
+			  <p class="icon_pro"><span>76</span>折</p>
+                <strong class="txt_red fred"> <em>$3290</em> <i>活動價</i>2490</strong> </div>				
+			  </a></li>		                  
+                  
+		  </ul>
+		</div>
+	</div>
+                    
+                    
+                    
+                    
+                    
+                
+                    <h2 class="protitle"><a name="pro3721" id="pro3721"></a>靜音升級 無聲勝有聲</h2>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+<div class="list_F bg01">
+		<ul>
+            
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=210520&ec=202211_Logitech" id="prod210520" name="prod210520"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202008/210520_M.jpg?t=20220124094315" border="0" /></p>
+		<storg>羅技 Logitech MK295 無線靜音鍵鼠組 石墨灰</storg>
+		<h4>送羅技小鼠墊</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>89</span>折</p>
+		<strong class="txt_red fred"> <em>市價$899</em> <i>活動價$</i>799 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=223811&ec=202211_Logitech" id="prod223811" name="prod223811"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202112/223811_M.jpg?t=20220831093453" border="0" /></p>
+		<storg>羅技 Logitech M650 多工靜音無線滑鼠 石墨灰</storg>
+		<h4>送羅技小鼠墊</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>91</span>折</p>
+		<strong class="txt_red fred"> <em>市價$1090</em> <i>活動價$</i>990 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=159775&ec=202211_Logitech" id="prod159775" name="prod159775"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201509/159775_M.jpg?t=20221101102741" border="0" /></p>
+		<storg>羅技 Logitech M235 無線滑鼠 灰</storg>
+		<h4>送羅技小鼠墊</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>67</span>折</p>
+		<strong class="txt_red fred"> <em>市價$599</em> <i>活動價$</i>399 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=223812&ec=202211_Logitech" id="prod223812" name="prod223812"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202112/223812_M.jpg?t=20220727095257" border="0" /></p>
+		<storg>羅技 Logitech M650 多工靜音無線滑鼠 珍珠白</storg>
+		<h4>送羅技小鼠墊</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>91</span>折</p>
+		<strong class="txt_red fred"> <em>市價$1090</em> <i>活動價$</i>990 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=170660&ec=202211_Logitech" id="prod170660" name="prod170660"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201610/170660_M.jpg?t=20220314190234" border="0" /></p>
+		<storg>羅技 Logitech M221 SILENT靜音無線滑鼠 黑灰</storg>
+		<h4>提供靜謐的滑動與捲動體驗</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>77</span>折</p>
+		<strong class="txt_red fred"> <em>市價$599</em> <i>活動價$</i>459 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=190252&ec=202211_Logitech" id="prod190252" name="prod190252"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201808/190252_M.jpg?t=20220316110449" border="0" /></p>
+		<storg>羅技 Logitech M110 靜音滑鼠</storg>
+		<h4></h4>
+		<div class="boxF_price">
+		
+		<strong class="txt_red fred"> <em>市價$329</em> <i>活動價$</i>329 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=171191&ec=202211_Logitech" id="prod171191" name="prod171191"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201611/171191_M.jpg?t=20220314110333" border="0" /></p>
+		<storg>羅技 Logitech M331 舒適靜音滑鼠 黑</storg>
+		<h4></h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>9</span>折</p>
+		<strong class="txt_red fred"> <em>市價$699</em> <i>活動價$</i>629 </strong> </div></a></li>
+                
+                    		<li><a href="http://www.tk3c.com/pt.aspx?pid=223813&ec=202211_Logitech" id="prod223813" name="prod223813"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202112/223813_M.jpg?t=20220727095230" border="0" /></p>
+		<storg>羅技 Logitech M650 多工靜音無線滑鼠 玫瑰粉</storg>
+		<h4>送羅技小鼠墊</h4>
+		<div class="boxF_price">
+		<p class="iconF_pro"><span>91</span>折</p>
+		<strong class="txt_red fred"> <em>市價$1090</em> <i>活動價$</i>990 </strong> </div></a></li>
+                		
+
+		</ul>
+	</div>
+                    
+                    
+                    
+                
+            <!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+            
+            
+            <div id="TkecFooter">
+            </div>
+        </div>
+        <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+        <div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+    </form>
+</body>
+</html>
+
