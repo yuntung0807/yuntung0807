@@ -1,0 +1,575 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
+@charset "UTF-8";
+
+body {
+    background: #f1cfff !important;
+}
+
+section a:hover{
+    filter: drop-shadow(2px 4px 6px #9855ce);
+}
+
+.price-group .product {
+  width: 100%;
+  margin: 0 auto 0%;
+}
+
+
+.line {
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    padding-top: 4%;
+}
+
+div#gotop img{
+    display: none;
+}
+
+div#gotop {
+    background-image: url("https://events.tk3c.com/events_net/events_net/tk3cgroup/images/230619/gotop.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 3%;
+    left: 64%;
+    top: 76%;
+}
+
+
+
+
+/* 燦坤揪團購*/
+#group-container .background {
+    background-image: url("https://events.tk3c.com/events_net/events_net/tk3cgroup/images/230619/kv_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 0;
+    position: relative;
+    margin: 0 auto 0;
+    background-position: 0 45px, top;
+    padding-bottom: 51.6%;
+}
+
+#group-container .background2{
+    max-width: 100%;
+    background-size: 100% auto;
+    background-position: 0vmax 3vmax, top;
+    background-attachment: unset;
+    top: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+
+
+
+#group-container .background .title {
+    width: 28%;
+    position: absolute;
+    left: 0;
+    right: 28%;
+    top: 8%;
+    margin: 0 auto;
+    -webkit-animation: tada 1.5s linear;
+            animation: tada 1.5s linear;
+    z-index: 2;
+}
+
+#group-container .background .stage {
+    width: 32%;
+    position: absolute;
+    right: 0;
+    left: 24%;
+    margin: 0 auto;
+    top: 13%;
+    z-index: 1;
+}
+
+
+#group-container .background .people {
+    width: 97%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 22%;
+    z-index: 1;
+    -webkit-animation: upAndDown 0.4s ease infinite alternate;
+    animation: upAndDown 0.4s ease infinite alternate;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+
+#group-container .background .light {
+  width: 30%;
+  position: absolute;
+  top: -15%;
+  mix-blend-mode: screen;
+}
+
+#group-container .background .light img {
+  -webkit-animation: light 2s infinite;
+          animation: light 2s infinite;
+}
+
+#group-container .background .light.left {
+  left: 53%;
+  top: -5%;
+  -webkit-animation: rotate-right 1.5s linear infinite alternate;
+          animation: rotate-right 1.5s linear infinite alternate;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+}
+
+#group-container .background .light.right {
+  right: 26%;
+    
+  -webkit-animation: rotate-left 1.8s linear infinite alternate;
+          animation: rotate-left 1.8s linear infinite alternate;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;  
+}
+
+
+#group-container .bubo{
+    width: 9%;
+    position: absolute;
+    z-index: 9;
+    top: 6%;
+
+    /* -webkit-animation: upAndDown 2s ease-in-out infinite alternate;
+    animation: upAndDown 2s ease-in-out infinite alternate;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s; */
+}
+
+#group-container .bubo .bubo01{
+    position: absolute;
+    left: 810%;
+    top: 9%;
+}
+
+#group-container .bubo .bubo02{
+    position: absolute;
+    left: 933%;
+    top: -11%;
+}
+
+#group-container .bubo .bubo03{
+    position: relative;
+    left: 73%;
+    top: 86%;
+}
+
+#group-container .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+    top: 20%; 
+    
+    -webkit-animation: upAndDown 1.7s ease-in-out infinite alternate;
+    animation: upAndDown 1.7s ease-in-out infinite alternate;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.price-group .time{
+    position: absolute;
+    top: -33%;
+    left: 9%;
+    width: 80%;
+    margin: 0 auto;
+    z-index: 5;
+
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+
+
+.price-group .timerarea{
+    
+    background: url("https://events.tk3c.com/events_net/events_net/tk3cgroup/images/230619/time.png") no-repeat center;
+    background-size: 100% auto;
+    
+    font-size: 58px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    height: 362px;
+    line-height: 7.5em;
+    text-shadow: #6934cc 0.1em 0.1em 0.2em;
+    color: #fff;
+    padding-left: 15%;
+
+}
+
+.price-group .front-title {
+    width: 100%;
+    padding-top: 9%;
+}
+
+.price-group .front-title a {
+  margin-bottom: 2%;
+  cursor: pointer;
+  margin: 0 0;
+  padding-bottom: 25px;
+}
+
+.price-group .front-title a:hover {
+    filter: drop-shadow(2px 4px 6px #320458);
+}
+
+
+.pd .title{
+    width: 60%;
+    margin-bottom: 3%;
+}
+
+.pd .price{
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 2%;
+}
+
+
+.pd .buttons{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+  }
+  
+.pd .buttons a{
+    margin: 0 7px;
+    cursor: pointer;
+    padding-bottom: 1%;
+  }
+  
+.pd .note{
+    padding: 1%;
+    font-size: 1.3em;
+    color: #333333;
+    font-weight: bold;
+  }
+  
+.pd .note2{
+    font-size: 1.2em;
+    color: #8800f1;
+    padding-bottom: 5%;
+  }
+  
+.pd .login {
+    width: 100%;
+  }
+  
+.pd .text{
+    margin: 2% auto 2%;
+  }
+
+
+
+
+@media only screen and (max-width: 1700px) {
+  #group-container .background .timerarea {
+    top: 71%;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .special-box {
+    margin: 0 auto 0;
+  }
+
+  #group-container .background {
+    padding-bottom: 51%;
+  }
+
+  #group-container .background2{
+    top: 0.8%;
+  }
+
+  #group-container .item{
+    top: 18%;
+  }
+
+  .price-group .time{
+    width: 65%;
+    left: 15%;   
+  }
+
+  .price-group .timerarea{
+    font-size: 36px;
+    height: 220px;
+    line-height: 7.5em;
+  }
+
+  .price-group .front-title{
+    width: 90%;
+    padding-top: 6%;
+  }
+
+  
+
+}
+@media only screen and (max-width: 1145px) {
+  .price-group .dirtybuble {
+    left: -45%;
+  }
+}
+/* 2023 3/9更新---end */
+@media only screen and (max-width: 992px) {
+ section {
+    width: 93%;
+}
+
+
+  #group-container .background {
+    padding-bottom: 48%;
+  }
+
+  #group-container .background2{
+    max-width: none;
+    width: 114%;
+    left: -8%;
+    top:0
+  }
+
+  #group-container .background .title {
+    width: 33%;
+    left: 2%;
+    top: 13%;
+  }
+
+  #group-container .background .stage{
+    left: 28%;
+    top: 22%;
+    width: 30%;
+  }
+
+  #group-container .background .people{
+    left: 2%;
+    top: 31%;
+  }
+
+  #group-container .bubo{
+    top: 13%;
+    left: 4%;
+  }
+
+  #group-container .item{
+    top: 15%;
+  }
+
+  .price-group .time{
+    width: 50%;
+    top: -10%;
+    left: 22%;
+  }
+
+  .price-group .timerarea{
+    font-size: 20px;
+    height: 134px;
+    line-height: 8em;
+  }
+
+  .price-group .front-title{
+    width: 80%;
+    padding-top: 13%;
+  }
+
+  .pd .price{
+    width: 91%;
+  }
+
+  .pd .note{
+    font-size: 1.3em;
+  }
+
+  .pd .note2{
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .board .texts {
+    top: 22%;
+  }
+
+  .badge {
+    font-size: 2.6vw;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 600px) {
+  #group-container .background {
+    padding-bottom: 47%;
+  }
+  #group-container .background .title {
+    left: 5%;
+  }
+
+  .badge {
+    font-size: 2.5vw;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .price-group .board .board-text p {
+    line-height: normal;
+  }
+  
+  .price-group .front-title{
+    padding-top: 8%;
+    width: 100%;
+  }
+
+  .price-group .front-title a {
+    width: 24%;
+    margin: 1px 1px;
+    padding-bottom: 0px;
+  }
+
+  .price{
+    width: 90%;
+  }
+
+
+  #group-container .background {
+    width: 145%;
+    padding-bottom: 88%;
+    left: -15%;
+  }
+
+  #group-container .background2{
+    width: 162%;
+    left: -40%;
+  }
+
+  #group-container .background .title {
+    width: 33%;
+    left: 0%;
+    top: 16%;
+  }
+
+
+  #group-container .background .stage {
+    width: 32%;
+    left: 26%;
+    top: 23%;
+  }
+
+  #group-container .background .people {
+    width: 94%;
+    left: 9%;
+    top: 23%;
+  }
+
+  #group-container .bubo{
+    width: 11%;
+    left: -13%;
+    top: 12%;
+  }
+
+  #group-container .item{
+    display: none !important;
+  }
+
+  .price-group .time{
+    width: 79%;
+    left: 7%;
+    top: -49%;
+  }
+
+  .price-group .timerarea{
+    font-size: 17px;
+    height: 150px;
+    line-height: 10.3em;
+  }
+
+  .line{
+    width: 94%;
+    padding-bottom: 8%;
+    padding-top: 8%;
+  }
+
+  .pd{
+    padding-bottom: 10%;
+  }
+
+  .pd .price {
+    width: 101%;
+  }
+
+  .pd .title{
+    width: 83%;
+    margin-bottom: 5%;
+  }
+
+  .pd .note{
+    font-size: .9em;
+  }
+  
+  .pd .note2{
+    font-size: .8em;
+  }
+
+  .pd .buttons{
+    width: 100%;
+    padding: 5px;
+  }
+
+  div#gotop {
+    left: -69%;
+    top: 84%;
+    width: 4%;
+}
+
+.fix_btn {
+    display: none;
+
+}
+
+.copyR{
+    margin-bottom:0px;
+}
+}
+@media only screen and (max-width: 376px) {
+
+
+  .price-group .board .hope {
+    height: 7.6rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .price-group .board .hope {
+    height: 7rem;
+  }
+
+  .badge {
+    font-size: 2vw;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .price-group .board .hope {
+    height: 6rem;
+  }
+
+  .special-box {
+    margin: 0 auto 0;
+  }
+
+  #group-container .background {
+    padding-bottom: 59%;
+  }
+  #group-container .background .timerarea {
+    top: 63%;
+  }
+
+  .badge {
+    font-size: 1.3vw;
+  }
+
+  .board-box4 .texts {
+    top: 5%;
+  }
+}
