@@ -1,0 +1,586 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.for_pc {
+  display: inherit !important;
+}
+
+.for_phone {
+  display: none !important;
+}
+
+body {
+  font-family: "微軟正黑體", "Noto Sans TC", "Font Awesome 5 Free", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -webkit-touch-callout: default;
+  outline: none;
+  display: block;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
+  color: unset;
+}
+
+/*  共用樣式調整 */
+body {
+  background: #ccc6b5;
+}
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/202211/kv.png") no-repeat center;
+  background-size: 100% auto;
+  background-position: 0 45px, top;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  max-width: 2000px;
+  top: 0;
+}
+
+.protitle {
+  width: 100%;
+  height: 170px;
+  font-size: 0;
+  visibility: hidden;
+}
+
+.bg01 {
+  background: none;
+  position: relative;
+  margin: 0 auto 5%;
+}
+.bg01:nth-of-type(1):before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/202211/s1.png") no-repeat center;
+  background-size: 100% auto;
+  background-position: 0 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  top: -35%;
+  padding-bottom: 28%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.bg01:nth-of-type(2):before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/202211/s2.png") no-repeat center;
+  background-size: 100% auto;
+  background-position: 0 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  top: -35%;
+  padding-bottom: 28%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.bg01:nth-of-type(3):before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/202211/s3.png") no-repeat center;
+  background-size: 100% auto;
+  background-position: 0 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  top: -35%;
+  padding-bottom: 28%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.bg01:nth-of-type(4):before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/202211/s4.png") no-repeat center;
+  background-size: 100% auto;
+  background-position: 0 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  top: -35%;
+  padding-bottom: 28%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.bg01 .slick-slide {
+  margin: 0 8px 0 -4px;
+}
+.bg01 ul {
+  width: 95%;
+  margin: 0 auto 0;
+}
+
+.aside-container {
+  width: 200px;
+  z-index: 999;
+}
+.aside-container .go-top {
+  width: 92%;
+  height: 50px;
+  margin: 25px auto 0;
+  font-size: 1.2em;
+  line-height: 2.5em;
+  font-weight: bold;
+  background: #000;
+  color: white;
+}
+.aside-container .aside-content li a {
+  background: #000;
+  color: white;
+}
+.aside-container .aside-content li a:hover {
+  background: #a6a6a6;
+}
+.aside-container .aside-header {
+  margin: 0 auto 20px;
+}
+
+section {
+  width: 60%;
+  height: auto;
+  margin: 0 auto 4%;
+  text-align: center;
+  position: relative;
+  z-index: 60;
+}
+section a {
+  height: auto;
+  display: block;
+}
+section a:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+/* 智能車用聯盟 頁面區 */
+#car-container {
+  width: 100%;
+  margin: 0 auto 0;
+  position: relative;
+}
+#car-container .background {
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-bottom: 37%;
+}
+#car-container .background .title {
+  width: 40%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15%;
+  margin: 0 auto;
+}
+#car-container .background .text {
+  width: 15%;
+  position: absolute;
+  opacity: 0;
+  right: 28%;
+  top: 17%;
+  --animate-duration: 3s;
+}
+#car-container .background .cloud {
+  width: 28%;
+  position: absolute;
+  z-index: -1;
+}
+#car-container .background .cloud.left {
+  left: 0;
+  top: 25%;
+  -webkit-animation: moveToRight infinite linear;
+          animation: moveToRight infinite linear;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+#car-container .background .cloud.right {
+  right: -1%;
+  left: unset;
+  top: 5%;
+  -webkit-animation: slowMove 3s linear alternate infinite;
+          animation: slowMove 3s linear alternate infinite;
+}
+
+.event-group .title {
+  width: 100%;
+  height: 18.5vmax;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/FORCAR/images/202211/event2.jpg") no-repeat center;
+  background-size: 100% auto;
+}
+.event-group .bg01 {
+  margin: 0 auto 0;
+  background: #d3d3d1;
+}
+.event-group .bg01:before {
+  display: none;
+}
+
+/*  電腦版其他尺寸 */
+@media only screen and (min-width: 2000px) {
+  .event-group .title {
+    height: 35vmin;
+  }
+}
+@media screen and (max-width: 1700px) {
+  section {
+    width: 70%;
+  }
+
+  .event-group .title {
+    height: 21.8vmax;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .protitle {
+    height: 175px;
+  }
+
+  section {
+    width: 74%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .protitle {
+    height: 150px;
+  }
+
+  section {
+    width: 84%;
+  }
+
+  .event-group .title {
+    height: 26.6vmax;
+  }
+}
+@media screen and (max-width: 1280px) {
+  section {
+    width: 92%;
+  }
+
+  .event-group .title {
+    height: 28.5vmax;
+  }
+}
+@media screen and (max-width: 1145px) {
+  .bg01:before {
+    top: -30% !important;
+  }
+}
+@media only screen and (max-width: 1025px) {
+  section a:hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: none;
+    transition: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+@media only screen and (max-width: 980px) {
+  #car-container .background {
+    padding-bottom: 53%;
+  }
+  #car-container .background .title {
+    width: 45%;
+    top: 15%;
+    left: -12%;
+  }
+  #car-container .background .text {
+    width: 18%;
+    right: 30%;
+    top: 16%;
+  }
+
+  .bg01 {
+    margin: 0 auto 5%;
+  }
+  .bg01:before {
+    top: -25% !important;
+    padding-bottom: 16% !important;
+    height: 100% !important;
+  }
+
+  .protitle {
+    height: 115px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 800px) {
+  #car-container .background .title {
+    width: 55%;
+    left: -12%;
+    top: 27%;
+  }
+  #car-container .background .text {
+    right: 28%;
+    top: 31%;
+  }
+
+  .bg01:before {
+    top: -21% !important;
+  }
+
+  .protitle {
+    height: 140px;
+  }
+
+  body:before {
+    background-size: 125% auto;
+    background-position: -8vmax 45px, top;
+  }
+
+  .event-group .title {
+    height: 18vmax;
+  }
+}
+/* 手機版 */
+@media only screen and (max-width: 768px) {
+  #car-container .background {
+    padding-bottom: 52%;
+  }
+  #car-container .background .title {
+    top: 19%;
+    width: 60%;
+    left: -30%;
+  }
+  #car-container .background .text {
+    width: 25%;
+  }
+  #car-container .background .cloud {
+    display: none;
+  }
+
+  .bg01:before {
+    top: -20% !important;
+    padding-bottom: 13% !important;
+  }
+
+  .protitle {
+    height: 90px;
+  }
+
+  .event-group .title {
+    height: 13.5rem;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 600px) {
+  .list_F li .boxF_price strong {
+    font-size: 180%;
+  }
+
+  .bg01:before {
+    width: 115% !important;
+    left: -9% !important;
+  }
+
+  body:before {
+    background-size: 130% auto;
+    background-position: -17vmin 7vmin, top;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  .event-group .title {
+    height: 12rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .fix_btn {
+    display: block;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  #car-container .background {
+    padding-bottom: 70%;
+  }
+  #car-container .background .title {
+    top: 22%;
+    width: 80%;
+    left: -18%;
+  }
+  #car-container .background .text {
+    width: 30%;
+    top: 25%;
+    right: 15%;
+  }
+
+  body:before {
+    background-size: 160% auto;
+    background-position: -32vmin 11vmin, top;
+  }
+
+  .bg01:before {
+    width: 175% !important;
+    left: -35% !important;
+    top: -19% !important;
+    padding-bottom: 19% !important;
+  }
+
+  .slick-prev {
+    left: -20px;
+  }
+
+  .slick-next {
+    right: -20px;
+  }
+
+  .event-group .events .slick-next {
+    right: -13px;
+  }
+  .event-group .events .slick-prev {
+    left: -13px;
+  }
+  .event-group .title {
+    width: 120%;
+    height: 9.5rem;
+    margin: 0 -5%;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .protitle {
+    height: 80px;
+  }
+
+  .event-group .title {
+    height: 8rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .protitle {
+    height: 75px;
+  }
+
+  .bg01:before {
+    width: 190% !important;
+    left: -45% !important;
+  }
+
+  .event-group .title {
+    height: 7.5rem;
+  }
+}
+@-webkit-keyframes moveToRight {
+  0% {
+    left: -10%;
+  }
+  20% {
+    left: 0%;
+  }
+  30% {
+    left: 20%;
+  }
+  40% {
+    left: 40%;
+  }
+  60% {
+    left: 60%;
+  }
+  70% {
+    left: 70%;
+  }
+  80% {
+    left: 80%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes moveToRight {
+  0% {
+    left: -10%;
+  }
+  20% {
+    left: 0%;
+  }
+  30% {
+    left: 20%;
+  }
+  40% {
+    left: 40%;
+  }
+  60% {
+    left: 60%;
+  }
+  70% {
+    left: 70%;
+  }
+  80% {
+    left: 80%;
+  }
+  100% {
+    left: 100%;
+  }
+}

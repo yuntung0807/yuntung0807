@@ -1,0 +1,498 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.for_pc {
+  display: inherit !important;
+}
+
+.for_phone {
+  display: none !important;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "微軟正黑體", "Noto Sans TC", "Font Awesome 5 Free", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -webkit-touch-callout: default;
+  outline: none;
+  display: block;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
+  color: unset;
+}
+
+/*  共用樣式調整 */
+body {
+  overflow-x: hidden;
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/bg2.png") repeat-y center;
+  background-size: 100% auto;
+  background-position: 0 51vmax;
+  background-color: #bdd3fa;
+}
+
+.protitle {
+  width: 100%;
+  height: 210px;
+  font-weight: bold;
+  margin: 0 auto 0;
+  position: relative;
+  font-size: 4em;
+  line-height: 4em;
+  z-index: 65;
+  float: unset;
+  font-size: 0;
+}
+.protitle:nth-of-type(1) {
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/s1.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(2) {
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/s2.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(3) {
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/s3.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(1):after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/FORCAR/images/s1a.png") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
+  background-position: 0 -37vmax;
+  mix-blend-mode: multiply;
+  -webkit-filter: brightness(300%);
+          filter: brightness(300%);
+}
+.protitle:nth-of-type(2):after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/FORCAR/images/s2a.png") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
+  background-position: 0 -37vmax;
+  mix-blend-mode: multiply;
+  -webkit-filter: brightness(300%);
+          filter: brightness(300%);
+}
+.protitle:nth-of-type(3):after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/FORCAR/images/s3a.png") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
+  background-position: 0 -37vmax;
+  mix-blend-mode: multiply;
+  -webkit-filter: brightness(300%);
+          filter: brightness(300%);
+}
+.protitle a {
+  height: 100%;
+  z-index: 10;
+}
+
+.bg01 {
+  width: 1144px;
+  float: unset;
+  margin: 0 auto;
+}
+.bg01:nth-of-type(odd) {
+  background: #0432ca;
+}
+.bg01:nth-of-type(even) {
+  background: #cd2d82;
+}
+
+form#form1 > .wrapper:nth-child(2n-1) {
+  max-width: 2000px;
+  position: relative;
+}
+
+.rightbtn,
+#gotop {
+  display: none !important;
+}
+
+.aside-container {
+  width: 200px;
+  z-index: 999;
+}
+.aside-container .go-top {
+  width: 92%;
+  height: 50px;
+  margin: 25px auto 0;
+  font-size: 1.2em;
+  line-height: 2.5em;
+  font-weight: bold;
+  background: #2763e9;
+  color: white;
+}
+.aside-container .aside-content li a {
+  background: #2763e9;
+  color: white;
+}
+.aside-container .aside-content li a:hover {
+  background: #990c0c;
+}
+.aside-container .aside-header {
+  margin: 0 auto 20px;
+}
+
+section {
+  width: 60%;
+  height: auto;
+  margin: 0 auto 4%;
+  text-align: center;
+  position: relative;
+  z-index: 60;
+}
+section a {
+  height: auto;
+  display: block;
+}
+section a:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+/* 智能車用聯盟 頁面區 */
+#car-container {
+  width: 100%;
+  margin: 0 auto 0;
+  position: relative;
+}
+#car-container .background {
+  background-image: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/bg1.png");
+  background-repeat: no-repeat;
+  background-position: 0 0, top;
+  background-size: 100% auto;
+  padding-bottom: 44.25%;
+  width: 100%;
+  height: 0;
+  position: relative;
+  margin: 0 auto 0;
+}
+#car-container .background .title {
+  width: 40%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 9%;
+  margin: 0 auto;
+  -webkit-animation: slide-down 1.6s ease;
+          animation: slide-down 1.6s ease;
+}
+#car-container .background .car {
+  width: 43%;
+  position: absolute;
+  top: 28%;
+  left: 13%;
+  -webkit-animation: move-to-right 0.85s linear;
+          animation: move-to-right 0.85s linear;
+}
+#car-container .background .car img {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation: shake 2.5s linear;
+          animation: shake 2.5s linear;
+}
+#car-container .background .people {
+  width: 48%;
+  position: absolute;
+  right: 6%;
+  top: 39%;
+  -webkit-animation: move-to-left 1.2s linear;
+          animation: move-to-left 1.2s linear;
+}
+#car-container .background .people img {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation: shake 2.8s linear;
+          animation: shake 2.8s linear;
+}
+#car-container .background .wave {
+  position: absolute;
+}
+#car-container .background .wave.left {
+  width: 40%;
+  top: 55%;
+  left: 0;
+  -webkit-animation: wave-move 1.8s ease-in infinite alternate;
+          animation: wave-move 1.8s ease-in infinite alternate;
+}
+#car-container .background .wave.right {
+  width: 50%;
+  right: 8%;
+  top: 76%;
+  -webkit-animation: wave-move 2.4s ease-in infinite alternate;
+          animation: wave-move 2.4s ease-in infinite alternate;
+}
+
+/*  電腦版其他尺寸 */
+@media only screen and (min-width: 2000px) {
+  body {
+    max-width: 2000px;
+    margin: 0 auto;
+    background-position: top;
+    background-size: auto;
+  }
+
+  #kuai3header {
+    position: fixed;
+    left: 0;
+  }
+
+  #car-container .background .wave.right {
+    right: 0;
+    top: 78%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .protitle {
+    height: 175px;
+  }
+  .protitle:after {
+    background-position: 0 -35vmax !important;
+  }
+}
+@media screen and (max-width: 1145px) {
+  .bg01 {
+    width: 100%;
+  }
+
+  .protitle {
+    background-size: 200% auto !important;
+    height: 250px;
+  }
+  .protitle:after {
+    background-position: -5vmax -46vmax !important;
+    background-size: 130% auto !important;
+  }
+}
+@media only screen and (max-width: 1025px) {
+  section a:hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: none;
+    transition: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+@media only screen and (max-width: 980px) {
+  #car-container .background {
+    background-position: 0 5vmin, top;
+    padding-bottom: 65%;
+    margin: 0 auto -17%;
+  }
+  #car-container .background .title {
+    width: 47%;
+  }
+  #car-container .background .wave.left {
+    top: 48%;
+  }
+  #car-container .background .wave.right {
+    top: 65%;
+  }
+
+  body {
+    background-position: 0 56vmin;
+  }
+
+  .protitle {
+    margin: 0 auto -4%;
+  }
+  .protitle:after {
+    background-position: -5vmax -33vmax !important;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 800px) {
+  .bg01:after {
+    bottom: -5%;
+  }
+  .bg01:before {
+    top: -3%;
+  }
+
+  .gifts .links a {
+    height: 11rem;
+  }
+
+  .protitle:after {
+    background-position: -5vmax -27vmax !important;
+  }
+}
+/* 手機版 */
+@media only screen and (max-width: 768px) {
+  #car-container .background {
+    background-position: -5vmin 5vmin, top;
+  }
+  #car-container .background .title {
+    top: 11%;
+    width: 45%;
+  }
+  #car-container .background .car {
+    width: 46%;
+    top: 30%;
+    left: 8%;
+  }
+  #car-container .background .people {
+    width: 45%;
+    right: 8%;
+    top: 39%;
+  }
+  #car-container .background .wave.left {
+    top: 57%;
+    width: 35%;
+  }
+  #car-container .background .wave.right {
+    right: 4%;
+  }
+
+  .bg01 {
+    margin: 0 auto 5%;
+  }
+
+  .protitle:after {
+    background-size: 150% auto !important;
+    background-position: -30vmin -53vmin !important;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 600px) {
+  .protitle {
+    height: 150px;
+  }
+
+  #car-container .background {
+    margin: 0 auto -13%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .fix_btn {
+    display: block;
+  }
+
+  .protitle {
+    height: 80px;
+    background-size: 250% auto !important;
+    margin: 0 auto 1%;
+  }
+
+  #car-container .background {
+    background-size: 120% auto;
+    background-position: -14vmin 11vmin, top;
+    margin: 0 auto -5%;
+  }
+  #car-container .background .title {
+    top: 20%;
+    width: 50%;
+  }
+  #car-container .background .car {
+    width: 49%;
+    top: 39%;
+    left: 8%;
+  }
+  #car-container .background .people {
+    width: 50%;
+    right: 2%;
+    top: 48%;
+  }
+  #car-container .background .wave.left {
+    top: 70%;
+  }
+  #car-container .background .wave.right {
+    top: 76%;
+  }
+
+  body {
+    background-position: 0 85vmin;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .protitle {
+    height: 70px;
+  }
+
+  .bg01:after {
+    bottom: -4.5%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .protitle {
+    height: 65px;
+  }
+
+  .gifts .links a {
+    margin: 0 1px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .protitle {
+    height: 55px;
+  }
+
+  .nav-footer .box-area li {
+    width: 44%;
+  }
+}
+@media only screen and (min-width: 2500px) {
+  #car-container .background3 {
+    background-position: 0 28vmax;
+  }
+}

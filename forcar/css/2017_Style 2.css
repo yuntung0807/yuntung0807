@@ -1,0 +1,236 @@
+@charset "utf-8";
+*{margin: 0;padding: 0}
+*:focus { outline: none; }/*黃框消除*/
+*{-webkit-text-size-adjust:none;}/*字體尺寸限制解除*/
+a{text-decoration:none;cursor: pointer}
+img {border:0px; } /*圖片超連結邊框消除*/
+
+html { margin: 0; padding: 0; height: 100%; }
+.boxfly{position: absolute; left:-9999em; top:-9999em;}
+.fred{color:#F00; font-weight:bold;}
+.fgold{color:#fea100; font-weight:bold;}
+.fgray{color: #666;}
+.bg01{ background:#0c83cb;}
+
+
+/*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+body {	margin: 0px; padding: 0; width: 100%; height: 100%;	font-family: Century Gothic,"微軟正黑體";background:url(../images/titlebg.png) center 45px repeat-x #fff;}
+
+/**/
+.wrapper{ display:block; width:1144px; margin:0 auto;}
+#gotop {display: none;    position: fixed;    padding: 10px 15px;cursor: pointer;margin: 50px 0px 0px 580px;left: 50%;z-index: 9;   bottom: 0px;}
+
+/*主視覺*/
+.title{	height: 410px;	position: relative;	margin: 0px auto;background:url(../images/title.png) no-repeat ;}
+.title img{ display: none;}
+
+/*排品區*/
+.protitle {	position: relative;	width: 1144px;	text-align: center;	height: 58px; display:block;overflow:hidden; float:left; background:url(../images/protitle_01.png); color:#fff; font-size:42px; padding-top:24px; padding-bottom: 6px; letter-spacing: 1px;}
+.protitle .more{ position:absolute; right:10px; bottom:10px; width:48px; height:48px;background:url(../images/more.png);}
+
+/*強打2品*/
+.hotpro_wrapper { width:100%; height:auto; margin:0 auto; display:block; position:relative;overflow:hidden; padding:0 0 0.7% 0;}
+.hotpro_pro { width:46%; height:auto; padding:2% 0 1% 0; position:relative;}
+.hotpro_price1{width: 32%; height: 30px;font-size: 14px;color: #999;line-height: 30px;text-align:left;overflow: hidden;display: block; float:left; margin-bottom:5px; text-decoration:line-through;}
+.hotpro_price2{width: 65%; height: 30px;font-size: 18px;color: #C71F5C;line-height: 30px; text-align:right;overflow: hidden;display: block; float:left; margin-bottom:5px;}
+.hotpro_price2 span{font-size: 24px;color: #C71F5C;line-height: 30px; font-weight:bold; margin-left:2px;}
+
+.boxL{ float:left; background-color:#fff;border-radius: 65px 5px 5px 5px; -webkit-border-radius: 65px 5px 5px 5px; -moz-border-radius: 65px 5px 5px 5px; margin:0 0 0 3%;}
+.boxR{float:right; background-color:#fff;border-radius: 5px 65px 5px 5px; -webkit-border-radius: 5px 65px 5px 5px; -moz-border-radius: 5px 65px 5px 5px; margin:0 3% 0 0;}
+.hotpro_pic {width: 39%;height: auto;overflow: hidden;display: block;float: left; margin:9px 10px;}
+.hotpro_pic img {width: 100%;height: auto;}
+/*文字區*/
+.hotpromain { width:55%; height:auto;float:left; overflow:hidden; }
+.hotpro_sale{width: 98%; height: 40px;font-size: 16px;color: #F00;line-height: 20px;text-align:left;overflow: hidden;display: block; margin-bottom:5px;}
+.hotpro_name{ width: 98%; height: 40px;font-size: 20px;color: #333;line-height: 20px;text-align:left;overflow: hidden;display: block; margin-bottom:5px;}
+.hotpro_info{width: 98%; height: 60px;font-size: 13px;color: #7e7e7e;line-height: 20px; text-align:left;overflow: hidden;display: block; margin:5px 0 0 0;}
+.hotpro_info span{ display:block; position:relative; padding-left:10px;}
+.hotpro_info span:before{ content:""; background:#999; border-radius:3px; width:8px; height:8px; position:absolute; left:0; top:6px;}
+
+/*強打2品 剩x組*/
+
+.hotpro_pro .salebox{  width:33%; height:40px; position:absolute; left:0; bottom:4%; background:#13b5b1; color:#fff; }
+.hotpro_pro .salebox em{ font-style:normal; font-size:2em; line-height:40px; display:inline-block; vertical-align:top; font-family:"Arial Black", Gadget, sans-serif; width:90%;}
+.hotpro_pro .salebox em:before{ content:"只剩"; font-size:0.6em; margin-right:3%; }
+.hotpro_pro .salebox em:after{ content:"組"; font-size:0.6em; margin-left:3%; }
+.hotpro_pro .salebox:before{ content:"";  width:8px; height:40px;background:#8af7f5; display:inline-block; margin-right:3%;}
+.hotpro_pro .salebox_l{   width: 0;height: 0;border-style: solid;border-width: 20px 0 20px 10px;
+border-color: transparent transparent transparent #13b5b1;position:absolute; left:33%; bottom:4%; }
+
+
+
+/*搶購btn*/
+.buybtn{ width:98%;height:40px;background:#F00; color:#fff; text-align:center; line-height:40px; font-size:1.5em; margin:0 auto; float:left;border-radius: 5px;transition: all 0.2s;  -webkit-transition: all 0.2s;  -ms-transition: all 0.2s; -moz-transition: all 0.2s;}
+.buybtn:hover{ background:#FF0; color:#000;box-shadow: 3px 3px 2px rgba(20%,20%,40%,0.5);}
+
+/*4品一排*/
+.pro_wrapper1 {width:100%;float: left;text-align: center; padding:0 0 1% 2%; margin-bottom:2%; position:relative; display:block; box-sizing:border-box; }
+.pro_wrapper1 ul {}
+.pro_wrapper1 ul li{width: 23%; margin: 0.8% 0 0 0.8%;background: #fff;display:block; float:left; border:3px solid #FEF20B;transition: all 0.3s;  -webkit-transition: all 0.3s;  -ms-transition: all 0.3s; -moz-transition: all 0.3s;border-radius: 10px;padding:0.5% 0; position:relative;}
+.pro_wrapper1 ul li:hover{border:3px solid #F30;transform: translateY(0.2em);}
+/*商品圖*/.pro_wrapper1 ul li .CVpic{ width:100%; height:auto }
+.pro_wrapper1 ul li .CVpic img{ width:155px; height:155px; margin:5px auto; object-fit: contain;}
+/*品名*/.pro_wrapper1 ul li .CVbtext01{ width:100%; height:39px; font-size:1em; line-height: 1.3em; padding:3px 0px;overflow: hidden;color: #000;background: #FEF20B;transition: all 0.3s;  -webkit-transition: all 0.3s;  -ms-transition: all 0.3s; -moz-transition: all 0.3s; font-weight:bold;}
+.pro_wrapper1 ul li:hover .CVbtext01{background:#F30; color:#FF0;}
+/*促銷文*/.pro_wrapper1 ul li .CVbtext02{font-size: 0.95em;line-height: 1.15em;height: 1em; padding:3px 0px 6px 0px;overflow: hidden;color:#C33; text-align:center;}
+/*市價*/.pro_wrapper1 ul li .CVbtext03{ color:#666; font-size:13px; line-height:22px; height:20px; overflow:hidden; text-decoration:line-through; text-align:right; margin-right:3%;}
+/*活動價*/.pro_wrapper1 ul li .CVbtext04{ color:#F00; font-size:13px;; line-height:28px; height:28px; overflow:hidden; text-align:right; margin-right:3%;}
+.pro_wrapper1 ul li .CVbtext04 span{line-height:26px; height:28px; font-weight:bold; font-size:25px;}
+/*購物金價*/.pro_wrapper1 ul li .CVbtext05{ color:#F60; font-size:22px; line-height:28px; height:28px; overflow:hidden;}
+.pro_wrapper1 ul li .CVbtext05 span{ font-size:26px; height:30px; font-weight:bold;}
+
+/*4品一排 x折*/
+.pro_wrapper1 .salebox{  width:30%; height:40px; position:absolute; left:0; bottom:2%; background:#13b5b1; color:#fff; }
+.pro_wrapper1 .salebox em{ font-style:normal; font-size:1.8em; line-height:40px; display:inline-block; vertical-align:top; font-family:"Arial Black", Gadget, sans-serif; width:85%;}
+.pro_wrapper1 .salebox em:after{ content:"折"; font-size:0.6em; margin-left:3%; }
+.pro_wrapper1 .salebox:before{ content:"";  width:8px; height:40px;background:#8af7f5; display:inline-block; margin-right:3%;}
+.pro_wrapper1 .salebox_l{   width: 0;height: 0;border-style: solid;border-width: 20px 0 20px 10px;
+border-color: transparent transparent transparent #13b5b1;position:absolute; left:30%; bottom:2%; }
+
+
+
+/*商品內容*/
+.list1{ width:1144px;overflow: hidden; float: left;text-align: center; padding:6px; box-sizing:border-box;margin-bottom:20px;}
+.list1 u{ width:96%; display:block; color:#FEF20B; font-size:13px; letter-spacing:1px; padding:8px; box-sizing:border-box; background:#F00; overflow:hidden; margin:5px 2%; text-decoration:none;border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px; float:left;}
+.list1 ul li{ text-align: center; float: left;height: 290px; width: 210px;margin: 4px;background:#FFF; border:3px solid #FEF20B;border-radius: 5px 5px 5px 5px;-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px; list-style:none;transition: all 0.3s;  -webkit-transition: all 0.3s;  -ms-transition: all 0.3s; -moz-transition: all 0.3s;}
+.list1 ul li:hover{ background:#FFF; border:3px solid #F30;box-shadow: 0px 0px 3px 3px rgba(0%,60%,0%,0.15);}
+.list1 .item_img{width: 100%; float:left;}
+.list1 .item_img img{width: 80%;}
+.list1 h4 {font-size: 13px;font-weight: bold; color: #FF0100; line-height: 24px;overflow: hidden; height: 20px;padding: 5px;width: 95%; display:block; float:left;}
+.list1 storg {font-size: 14px;line-height: 26px;font-weight: bold;height: 26px;float: left;	overflow: hidden; width: 100%; background:#FEF20B; color:#000; display:block;}
+.list1 ul li:hover storg { background:#F30; color:#FF0;}
+.list1 p{width: 100%;padding: 3px 0 3px 0; display:block;font-size: 13px; padding-top:5px; float:left;}
+.list1 .item_text05 { line-height:20px;}
+.list1 .item_text05 span{font-size: 25px;}
+.list1 .CVbtext04{width: 100%;padding: 3px 0 3px 0; display:block;font-size: 13px; padding-top:5px; float:left;color:#F00; font-weight:bold;}
+.list1 .CVbtext04 > span{font-size: 25px;}
+
+.copyR{ background:#000; color:#fff; text-align:center; font-size:90%; padding:5px 0; width:100%; float:left; margin-top:20px;}
+
+/*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ PC版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+@media screen and (min-width:751px) {
+/*按鈕*/
+.itemBox{height:73px;position:relative; z-index:99; width:100%; margin-bottom:40px; margin-top:-33px; }
+#btnBox03{position:absolute;  top:29px;  z-index:100; text-align:center; width:100%;  padding-top: 2px;}
+#btnBox03 a{ display:inline-block;}
+#btnBox03 a:hover{ opacity:1; transition: all 0.5s;  -webkit-transition: all 0.5s;  -ms-transition: all 0.5s; -moz-transition: all 0.5s;}
+
+/*選單pin住後更換底圖的效果*/
+.fixing  #btnBox03 .upbox {position:fixed; z-index:9998 !important; width:100%;  height: 35px; background:#FEF20B 0 0 repeat-x; top:0; left:0;  box-shadow: 0 1px 10px 0px; padding-top:15px; border-bottom:5px solid #b9ae4f; }/*滑鼠移過去的時候，增加新的延伸背景*/
+.fixing  #btnBox03{ background:none;}/*把原本的底圖關掉*/
+
+
+.btn_01{ display:block; width:180px; height:55px; color: #fff; border:2px solid #555; font-size: 160%; line-height: 55px; color: #fff;background: #7d7e7d; /* Old browsers */
+background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #7d7e7d 0%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */}
+
+.btn_01:hover{ color: #000;background: #f6f8f9; /* Old browsers */
+background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */}
+
+}
+
+/*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+@media screen and (min-width: 320px) and (max-width: 750px){
+#kuai3header{ width:100% !important; margin: 0px auto; z-index:9999; position:fixed;}
+#kuai3header .words{ width:100% !important;}
+#kuai3header .words .font{ display:none !important;}
+
+body {	margin: 0px; padding: 0; width: 100%; height: 100%;	font-family: Century Gothic,"微軟正黑體";background:none;}
+
+
+.wrapper{ display:block; width:100%; margin:0 auto;}
+#gotop {display: none;  position: fixed;padding: 0;cursor: pointer;z-index: 999999; bottom: 45px; margin:0; left:85%;}
+#gotop img{ width:100%;}
+
+/*主視覺*/
+.title{ width:100%;	height: auto;	position: relative;	margin: 0px auto;background:none ; }
+.title img{ display: block; width:100%;}
+
+/*按鈕*/
+.itemBox{height:73px;position:fixed; z-index:99; width:100%;bottom:0;  }
+.itemBox .sticky-wrapper{ height:50px;}
+#btnBox03{position:absolute;  top:29px;  z-index:100; text-align:center; width:100%;  padding-top: 2px;}
+#btnBox03 a{ display:inline-block; float:left;}
+#btnBox03 a:hover{ opacity:1; transition: all 0.5s;  -webkit-transition: all 0.5s;  -ms-transition: all 0.5s; -moz-transition: all 0.5s;}
+
+/*選單pin住後更換底圖的效果*/
+.fixing  #btnBox03 .upbox {position:fixed; z-index:9 !important; width:100%;  height: 45px; background:none; bottom:0; left:0;  box-shadow: 0 0 0 0; padding-top:0; border-bottom:0 solid #000; }/*滑鼠移過去的時候，增加新的延伸背景*/
+.fixing  #btnBox03{ background:none;}/*把原本的底圖關掉*/
+	
+#btnBox03 .btn_01{ display:block; width:16.95%; height:45px; color: #fff; border:1px solid #878483; font-size: 100%; line-height: 42px; color: #fff;background: #231815; float:left; padding: 0 1%; border-radius: 5px 5px 0 0;}
+
+#btnBox03 .fontm{width:19%; }
+
+
+
+
+/*排品區*/
+.protitle {	position: relative;	width: 97%;	text-align: left;	height: 40px; display:block;overflow:hidden; float:left; background:url(../images/protitle_01.png) 11% bottom no-repeat; background-size:250%; color:#fff; font-size:185%;  padding-left:3%; margin: -3% auto 0 auto; padding-top:6%; letter-spacing: 0.2em;}
+.protitle .more{ position:absolute; right:2%; bottom:2%; width:45px; height:45px;background:url(../images/more.png); background-size:cover;}
+
+/*強打2品*/
+.hotpro_wrapper { width:100%; height:auto;}
+.boxL{ width:96%; margin:1% 2%; border-radius:10px;}
+.boxR{ width:96%;margin:1% 2%; border-radius:10px; float:left;}
+.hotpromain { width:50%;}
+.hotpro_pic { margin:1%; width:46%; text-align:center;}
+.hotpro_pic img {width:85%;}
+
+.hotpro_info{ display:none;}
+.hotpro_price1{ width:100%; height:18px; line-height:21px; text-align:right; margin-bottom:0; font-size:80%;}
+.hotpro_price2{ width:100%; height:25px;}
+.hotpro_name{ font-size:100%; margin-bottom:0; font-weight:bold;}
+.hotpro_sale{ font-size:85%; margin-bottom:0; line-height:normal; height:auto;}
+
+/*強打2品 剩x組*/
+
+.hotpro_pro .salebox{  width:40%; height:30px; }
+.hotpro_pro .salebox em{ font-size:1.4em; line-height:30px;}
+.hotpro_pro .salebox em:before{font-size:0.4em; margin-right:3%; }
+.hotpro_pro .salebox em:after{ font-size:0.4em; margin-left:3%; }
+.hotpro_pro .salebox:before{ content:"";  width:8px; height:30px;}
+.hotpro_pro .salebox_l{  border-width: 15px 0 15px 5px; left:40%; bottom:4%; }
+
+
+.buybtn{ font-size:110%; height:auto; line-height:normal; padding:2% 0; margin-bottom:1%;}
+.buybtn img{ display:none;}
+
+/*4品一排*/
+.pro_wrapper1 {padding:0 0 1% 1%;  }
+.pro_wrapper1 ul li{width: 46%; margin:1%;}
+/*品名*/.pro_wrapper1 ul li .CVbtext01{  height:34px; font-size:14px; font-weight:bold; line-height: 1.3em; }
+/*促銷文*/.pro_wrapper1 ul li .CVbtext02{font-size: 0.7em;line-height: 1.15em;height: 1em; }
+.pro_wrapper1 ul li .CVpic img{ width:90%;}
+
+/*4品一排 x折*/
+.pro_wrapper1 .salebox{  width:40%; height:30px; bottom:10%;  }
+.pro_wrapper1 .salebox em{  font-size:1.4em; line-height:30px; }
+.pro_wrapper1 .salebox em:after{  font-size:0.4em; margin-left:3%; }
+.pro_wrapper1 .salebox:before{  width:5px; height:30px; margin-right:3%; margin-left:-5%;}
+.pro_wrapper1 .salebox_l{  border-width: 15px 0 15px 5px;left:40%; bottom:10%; }
+
+
+/*商品內容*/
+.list1{ width:100%;overflow: hidden; float: left;text-align: center; padding:6px; box-sizing:border-box; margin-bottom:15px;}
+.list1 u{ display:block; color:#FEF20B; font-size:0.8em; letter-spacing:1px; padding:1%; box-sizing:border-box; background:#F00; overflow:hidden; margin:8px; text-decoration:none;border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px; float:left;}
+
+.list1 ul li{ text-align: center; float: left;height:auto; width: 46%;margin: 1%;background:#FFF; border:3px solid #FEF20B;border-radius: 5px 5px 5px 5px;-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px; list-style:none;transition: all 0.3s;  -webkit-transition: all 0.3s;  -ms-transition: all 0.3s; -moz-transition: all 0.3s;}
+.list1 ul li:hover{ background:#FFF; border:3px solid #F30;box-shadow: 0px 0px 3px 3px rgba(0%,60%,0%,0.15);}
+.list1 .item_img{width: 100%; float:left;}
+.list1 .item_img img{width: 135px; height:135px;}
+.list1 h4 {font-size: 13px;font-weight: bold; color: #FF0100; line-height: 24px;overflow: hidden; height: 20px;padding: 5px;width: 95%; display:block; float:left;}
+.list1 storg {font-size: 14px;line-height: 1.3em;font-weight: bold;height: 34px;float: left;	overflow: hidden; width: 100%; background:#FEF20B; color:#000; display:block;}
+.list1 ul li:hover storg { background:#F30; color:#FF0;}
+.list1 p{width: 100%;padding: 3px 0 3px 0; display:block;font-size: 13px; padding-top:5px; float:left;}
+.list1 .item_text05 { line-height:20px;height:24px;}
+.list1 .item_text05 span{font-size: 25px; }
+.CVbtext04{width: 100%;padding: 3px 0 3px 0; display:block;font-size: 13px; padding-top:5px; float:left;color:#F00; font-weight:bold;}
+.CVbtext04 > span{font-size: 25px;}
+.copyR{ margin-bottom: 50px; background: #c5c5c5; color: #000; font-size: 80%;}
+	
+}

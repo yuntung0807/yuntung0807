@@ -1,0 +1,390 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.for_pc {
+  display: inherit !important;
+}
+
+.for_phone {
+  display: none !important;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "微軟正黑體", "Noto Sans TC", "Font Awesome 5 Free", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -webkit-touch-callout: default;
+  outline: none;
+  display: block;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
+  color: unset;
+}
+
+/*  共用樣式調整 */
+body {
+  overflow-x: hidden;
+  background: #000;
+}
+
+form#form1 {
+  position: relative;
+}
+form#form1:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/FORCAR/images/0812/bg.jpg") repeat-y center;
+  background-size: 100% auto;
+  background-position: 0 32vmax, top;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  max-width: 2000px;
+}
+
+.protitle {
+  width: 100%;
+  height: 210px;
+  font-size: 0;
+}
+.protitle:nth-of-type(1) {
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/0812/bar01.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(2) {
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/0812/bar02.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(3) {
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/0812/bar03.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(4) {
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/0812/bar04.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(5) {
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/0812/bar05.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(6) {
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/0812/bar06.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(7) {
+  background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/0812/bar07.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle a {
+  height: 100%;
+}
+
+.bg01 {
+  background: none;
+  position: relative;
+  padding: 2%;
+}
+.bg01.num-4:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/FORCAR/images/0812/floor4.png") no-repeat center;
+  background-size: 100% auto;
+  background-position: 0 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  padding-bottom: 4%;
+  top: -4%;
+}
+.bg01.num-8:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/FORCAR/images/0812/floor8.png") no-repeat center;
+  background-size: 100% auto;
+  background-position: 0 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  padding-bottom: 2%;
+  top: -1%;
+}
+
+.aside-container {
+  width: 200px;
+  z-index: 999;
+}
+.aside-container .go-top {
+  width: 92%;
+  height: 50px;
+  margin: 25px auto 0;
+  font-size: 1.2em;
+  line-height: 2.5em;
+  font-weight: bold;
+  background: #000;
+  color: white;
+}
+.aside-container .aside-content li a {
+  background: #000;
+  color: white;
+}
+.aside-container .aside-content li a:hover {
+  background: #a6a6a6;
+}
+.aside-container .aside-header {
+  margin: 0 auto 20px;
+}
+
+section {
+  width: 60%;
+  height: auto;
+  margin: 0 auto 4%;
+  text-align: center;
+  position: relative;
+  z-index: 60;
+}
+section a {
+  height: auto;
+  display: block;
+}
+section a:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+/* 智能車用聯盟 頁面區 */
+#car-container {
+  width: 100%;
+  margin: 0 auto 0;
+  position: relative;
+}
+#car-container .background {
+  background-image: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/0812/kv.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0, top;
+  background-size: 100% auto;
+  padding-bottom: 35.05%;
+  width: 100%;
+  height: 0;
+  position: relative;
+  margin: 0 auto 0;
+  background-position: 0 45px, top;
+  padding-bottom: 37%;
+}
+#car-container .background .title {
+  width: 40%;
+  position: absolute;
+  left: 15%;
+  top: 30%;
+  margin: 0 auto;
+  -webkit-animation: slide-down 1.6s ease;
+          animation: slide-down 1.6s ease;
+}
+#car-container .background .subtitle {
+  width: 30%;
+  position: absolute;
+  top: 58%;
+  left: 20%;
+}
+
+/*  電腦版其他尺寸 */
+@media only screen and (min-width: 2000px) {
+  body {
+    max-width: 2000px;
+    margin: 0 auto;
+    background-position: top;
+    background-size: auto;
+  }
+
+  #kuai3header {
+    position: fixed;
+    left: 0;
+  }
+
+  #car-container .background .wave.right {
+    right: 0;
+    top: 78%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .protitle {
+    height: 175px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  #car-container .background .title {
+    top: 35%;
+  }
+  #car-container .background .subtitle {
+    top: 63%;
+  }
+}
+@media screen and (max-width: 1145px) {
+  .protitle {
+    height: 250px;
+  }
+
+  .bg01 {
+    background: #c2c2c2;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .bg01.num-8:before {
+    top: -3%;
+  }
+}
+@media only screen and (max-width: 1025px) {
+  section a:hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: none;
+    transition: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .protitle {
+    margin: 0 auto 6%;
+    height: 95px;
+  }
+}
+/* 手機版 */
+@media only screen and (max-width: 768px) {
+  #car-container .background {
+    background-size: 130% auto;
+    background-position: -20vmin 5vmin, top;
+    padding-bottom: 50%;
+  }
+  #car-container .background .title {
+    top: 37%;
+    width: 50%;
+    left: 2%;
+  }
+  #car-container .background .subtitle {
+    width: 40%;
+    top: 63%;
+    left: 6%;
+  }
+
+  form#form1:before {
+    background-position: 0 52vmin, top;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 600px) {
+  .protitle {
+    height: 150px;
+    margin: 0 auto 1%;
+  }
+
+  .bg01.num-8:before {
+    top: -2%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .fix_btn {
+    display: block;
+  }
+
+  .protitle {
+    height: 65px;
+    background-size: 135% auto !important;
+    margin: 0 auto 9%;
+  }
+
+  #car-container .background {
+    background-position: -15vmin 5vmin, top;
+    padding-bottom: 51%;
+  }
+  #car-container .background .title {
+    top: 37%;
+    width: 55%;
+  }
+  #car-container .background .subtitle {
+    width: 45%;
+    top: 65%;
+  }
+
+  .bg01 {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .bg01.num-8:before {
+    top: -2%;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .protitle {
+    height: 70px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .protitle {
+    height: 65px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .protitle {
+    height: 55px;
+  }
+}
