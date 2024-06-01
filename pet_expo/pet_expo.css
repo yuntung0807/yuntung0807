@@ -1,0 +1,634 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
+@charset "UTF-8";
+/*  共用樣式調整 */
+body {
+  background: #ffc724;
+  position: relative;
+}
+
+body:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/pet_expo/images/bg-ok.jpg") repeat-y center;
+  background-size: 100% auto;
+  background-position: 0 0, top;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -3;
+}
+
+.protitle {
+  width: 70%;
+  font-size: 0;
+  z-index: 1;
+  padding-bottom: 5%;
+}
+.protitle:nth-of-type(1) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/pet_expo/images/f01.png") no-repeat center;
+  background-size: 100% auto;
+  font-size: 0;
+}
+
+.protitle:nth-of-type(2) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/pet_expo/images/f02.png") no-repeat center;
+  background-size: 100% auto;
+  font-size: 0;
+}
+
+.protitle:nth-of-type(3) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/pet_expo/images/f03.png") no-repeat center;
+  background-size: 100% auto;
+  font-size: 0;
+}
+
+.protitle:nth-of-type(4) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/pet_expo/images/f04.png") no-repeat center;
+  background-size: 100% auto;
+  font-size: 0;
+}
+
+.protitle:nth-of-type(5) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/pet_expo/images/f05.png") no-repeat center;
+  background-size: 100% auto;
+  font-size: 0;
+}
+
+.protitle:nth-of-type(6) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/pet_expo/images/f06.png") no-repeat center;
+  background-size: 100% auto;
+  font-size: 0;
+}
+
+.bg01 {
+  background: none;
+}
+
+
+section {
+  width: 55%;
+}
+
+section .title {
+  width: 80%;
+  height: auto;
+  margin: 1% auto 1%;
+  padding-top: 2%;
+}
+
+section a:hover {
+    -webkit-filter: brightness(1.06);
+    filter: brightness(1.06);
+}
+
+.event-group{
+  width: 85%;
+  z-index: 8;
+}
+
+
+.item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -2;
+    top: 0;
+  }
+
+/* petexpo頁面區 */
+#petexpo-container {
+  width: 100%;
+  margin: 0 auto 0;
+  position: relative;
+}
+
+#petexpo-container .background {
+  background-image: url("https://events.cdn-tkec.tw/events_net/events_net/pet_expo/images/kv_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 100%;
+  height: 0;
+  position: relative;
+  margin: 0 auto 0;
+  background-position: 0 45px, top;
+  padding-bottom: 41%;
+  z-index: 2; 
+}
+
+#petexpo-container .background .logo {
+    width: 6%;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 24%;
+    top: 45px;
+}
+
+#petexpo-container .background .title {
+  width: 33%;
+  position: absolute;
+  left: -12%;
+  right: 0;
+  margin: 0 auto;
+  top: 14%;
+  z-index: 8;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+
+#petexpo-container .background .pet {
+  width: 13%;
+  position: absolute;
+  left: 0;
+  right: 30%;
+  margin: 0 auto;
+  top: 12%;
+  z-index: 8;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+#petexpo-container .background .pet img{
+  animation-name: lazy_shake_2;
+  transform-origin: 50% 100%;
+  animation: lazy_shake_2 3s infinite;
+  -moz-animation: lazy_shake_2 3s infinite;
+  -webkit-animation: lazy_shake_2 3s infinite;
+}
+
+@keyframes lazy_shake_2{
+  0% {
+      transform: rotate(deg);
+  }
+  50% {
+      transform: rotate(-5deg);
+  }
+  100% {
+      transform: rotate(deg);
+  }
+}
+
+#petexpo-container .background .product.left {
+  width: 24%;
+  position: absolute;
+  left: 0;
+  right: 69%;
+  margin: 0 auto;
+  top: 50%;
+  z-index: 9;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-duration:2s;
+  animation-duration:2s;
+}
+
+#petexpo-container .background .product img{
+  -webkit-animation: bounce-play 4s linear infinite;
+  animation: bounce-play 4s linear infinite;
+}
+
+@keyframes bounce-play{
+  0%, 5%, 12.5%, 20%, 25% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+10% {
+  -webkit-transform: translateY(-3%);
+  transform: translateY(-3%);
+}
+
+15% {
+  -webkit-transform: translateY(-1%);
+  transform: translateY(-1%);
+}
+}
+
+#petexpo-container .background .product.right {
+  width: 35%;
+  position: absolute;
+  left: 57%;
+  right: 0;
+  margin: 0 auto;
+  top: 23%;
+  z-index: 9;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-duration:2s;
+  animation-duration:2s;
+}
+
+
+
+
+#petexpo-container .background .item img {  
+    -webkit-animation: upAndDown 1.7s ease-in-out infinite alternate;
+    animation: upAndDown 1.7s ease-in-out infinite alternate;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+
+.bank-group {
+  margin: 0 auto 5%;
+}
+
+
+.product-box .title{
+  width: 65%;
+}
+
+.all-box ul {
+  padding: 2%;
+}
+
+.all-box li{
+  margin: 4px;
+  width: 45%;
+}
+
+.all-box .long{
+  width: 91%;
+}
+
+
+
+#banner-area{
+  background-color: rgb(255 255 255 / 59%);
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 40px;
+  box-shadow: #ffffff 3px 3px 15px 0px inset;
+}
+.special-box ul  {
+  position: relative;
+}
+
+.special-box li.finish,
+.special-box li.fascia{
+    position: relative;
+}
+
+.special-box li.finish:before,
+.special-box li.fascia:before{
+    content: "已結束";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #0000009c;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    color: yellow;
+    margin: 0 auto;
+    font-size: 3em;
+    line-height: 55px;
+    border-radius: 10px;
+    white-space: pre;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.bank-group{
+    margin: 0 auto 5%;
+}
+
+.fb{
+  width: 82%;
+  padding-bottom: 2%;
+
+  -webkit-animation-iteration-count:infinite;
+  animation-iteration-count:infinite;
+  -webkit-animation-duration:2s;
+  animation-duration:2s;
+}
+
+.item {
+  width: 95%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  top: 13%;
+}
+
+/*  電腦版其他尺寸 */
+@media only screen and (max-width: 1600px) {
+  section .title {
+    width: 55%;
+    }
+
+  .all-box .title{
+    width: 76%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  section {
+    width: 60%;
+  }
+
+  .list_F{
+    width: 98%;
+  }
+
+  .list_M{
+    width: 98%;
+  }
+
+  #petexpo-container .background {
+    padding-bottom: 41%;
+  }
+
+
+
+}
+@media screen and (max-width: 1145px) {
+  section {
+    width: 75%;
+  }
+
+  .fb{
+    width: 60%;
+  }
+
+  .protitle {
+    width: 62%;
+  }
+  .protitle:hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  #petexpo-container .background .title {
+    top: 19%;
+  }
+
+  #petexpo-container .background .pet {
+    top: 17%;
+  }
+
+  #petexpo-container .background .product{
+    top: 55%;
+  }
+
+
+
+}
+@media only screen and (max-width: 992px) {
+
+  section {
+    width: 92%;
+    margin-bottom: 1%;
+  }
+
+  section .title {
+    width: 65%;
+    padding-bottom: 1%;
+  }
+
+  .item{
+    display: none !important;
+  }
+
+
+  .all-box{
+    width: 100%;
+  }
+
+  .all-box ul{
+    padding: 10px 0px ;
+  }
+  
+  #petexpo-container .background {
+    padding-bottom: 72%;
+    background-size: 150% auto;
+    background-position: -34vmax 3vmax, top;
+  }
+  
+  #petexpo-container .background .logo {
+    width: 13%;
+    left: 3%;
+  }
+  #petexpo-container .background .title {
+    width: 54%;
+    top: 21%;
+    left: -36%;
+  }
+
+  #petexpo-container .background .pet {
+    width: 18%;
+    top: 23%;
+    left: -39%;
+}
+
+  #petexpo-container .background .product.right {
+    width: 44%;
+    left: 55%;
+    top: 33%;
+
+  }
+
+
+  #petexpo-container .background .product.left {
+    width: 32%;
+    right: 62%;
+    top: 73%;
+
+  }
+ 
+
+  .protitle {
+    width: 80%;
+    height: 80px;
+  }
+
+  .product-box .title {
+    width: 80%;
+}
+
+  .event-group{
+    width: 90%;
+  }
+
+  .fb {
+    width: 92%;
+}
+
+  
+  
+}
+@media only screen and (min-width: 769px) and (max-width: 850px) {
+}
+/* 手機版 */
+@media only screen and (max-width: 768px) {
+
+
+  .list_F {
+    width: 95%;
+  }
+
+  .list_M {
+    width: 98%;
+ }
+
+}
+@media only screen and (min-width: 577px) and (max-width: 600px) {
+  .protitle {
+    height: 105px;
+  }
+
+  #petexpo-container .background {
+    background-position: -13vmin 7vmin, top;
+  }
+
+  .all-box .board a{
+    margin: 8px 0px;
+  }
+
+  body:before{
+    background-position: -15vmax 36vmax, top;
+  }
+
+
+
+}
+@media only screen and (max-width: 576px) {
+  .fix_btn {
+    display: block;
+  }
+  .fix_btn .dropdown-menu {
+    display: none;
+  }
+
+  .fire{
+    top: 75%;
+  }
+
+  #petexpo-container .background {
+    padding-bottom: 105%;
+    background-size: 170% auto;
+    background-position: -39vmax 6vmax, top;
+  }
+
+  #petexpo-container .background .logo {
+    width: 16%;
+}
+ 
+  #petexpo-container .background .title {
+    width: 62%;
+    top: 16%;
+    left: -3%;
+  }
+
+  #petexpo-container .background .product.right {
+    width: 51%;
+    left: 35%;
+    top: 59%;
+  }
+
+  #petexpo-container .background .product.left {
+    width: 36%;
+    right: 42%;
+    top: 76%;
+  }
+  
+  #petexpo-container .background .pet {
+    width: 23%;
+    top: 16%;
+    left: -9%;
+  }
+
+  .protitle {
+    width: 95%;
+    height: 41px;
+}
+
+  section .title {
+    width: 70%;
+    padding-bottom: 0px;
+  }
+
+  .list_M {
+    width: 100%;
+  }
+
+  .list_F{
+    width: 100%;
+  }
+
+  #banner-area{
+    border-radius: 20px;
+  }
+
+  .all-box .title {
+    width: 95%;
+  }
+
+  .all-box ul{
+    border-radius: 20px;
+  }
+
+  .all-box li {
+    width: 47%;
+    margin: 2px;
+  }
+
+  .all-box .long {
+    width: 96%;
+  }
+
+
+  body:before {
+    background-position: -7vmax 2vmax, top;
+}
+
+.all-box .new .short {
+  width: 100%;
+}
+
+.all-box{
+  padding-bottom: 2%;
+}
+
+.fb {
+  width: 95%;
+}
+
+}
+@media only screen and (max-width: 360px) {
+  .protitle {
+    height: 70px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #petexpo-container .background {
+    background-position: -37vmin 14vmin, top;
+  }
+
+  .protitle {
+    height: 65px;
+  }
+}
+@media only screen and (min-width: 2500px) {
+  .protitle {
+    height: 200px;
+  }
+}
