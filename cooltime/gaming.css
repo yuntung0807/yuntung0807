@@ -1,0 +1,489 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
+@charset "UTF-8";
+/*  共用樣式調整 */
+body {
+  background: #0f2d77;
+}
+
+.protitle {
+  width: 60%;
+  height: 205px;
+  line-height: 430%;
+  background: url("https://events.tk3c.com/events_net/events_net/GAMING2307/images/bar.png") no-repeat center;
+  background-size: 100% auto;
+}
+
+.bg01 {
+  background: none;
+  position: relative;
+  margin: 0 auto 1%;
+}
+
+.more {
+  width: 15%;
+  height: 35px;
+  display: block;
+  background: #c87ff8;
+  color: #fff;
+  margin: 0 auto 5%;
+  padding: 5px;
+  font-size: 25px;
+  line-height: 33px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.more:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+  color: #fff;
+}
+
+section {
+  width: 60%;
+}
+section .title {
+  width: 60%;
+  height: auto;
+  margin: 0 auto -5%;
+}
+
+/* 電競最夏趴 */
+#gaming-container {
+  width: 100%;
+  margin: 0 auto 0;
+  position: relative;
+}
+#gaming-container .background {
+  background-image: url("https://events.cdn-tkec.tw/events_net/events_net/GAMING2307/images/kv.png");
+  background-repeat: no-repeat;
+  background-position: 0 0, top;
+  background-size: 100% auto;
+  padding-bottom: 47.45%;
+  width: 100%;
+  height: 0;
+  position: relative;
+  margin: 0 auto 0;
+  background-position: 0 45px, top;
+  padding-bottom: 49%;
+}
+#gaming-container .background .title {
+  width: 30%;
+  position: absolute;
+  left: 22%;
+  top: 21%;
+  z-index: 2;
+}
+#gaming-container .background .title img {
+  -webkit-animation: flashit 0.8s linear;
+          animation: flashit 0.8s linear;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+#gaming-container .background .product {
+  width: 35%;
+  position: absolute;
+  right: 17%;
+  margin: 0 auto;
+  top: 27%;
+}
+#gaming-container .background .logo {
+  width: 40%;
+  height: auto;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 10%;
+}
+#gaming-container .background .subtitle {
+  width: 25%;
+  position: absolute;
+  left: 25%;
+  top: 59%;
+}
+#gaming-container .background .subtitle img {
+  -webkit-animation: flipInY 1.6s linear;
+          animation: flipInY 1.6s linear;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.background2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/GAMING2307/images/bg.png") no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0, top;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+}
+.background2.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.event-group .content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  position: relative;
+  margin: 0 auto 3%;
+}
+.event-group .content .banner1,
+.event-group .content .banner2 {
+  width: 47%;
+  margin: 0 5px;
+}
+.event-group .arrow {
+  width: 10%;
+  margin: 0 auto 0;
+}
+
+.all-box ul {
+  width: 100%;
+}
+.all-box ul li {
+  width: 45%;
+  margin: 0 5px 2%;
+}
+.all-box ul li.colmn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.all-box ul li.colmn a {
+  margin-bottom: 1.5%;
+}
+.all-box ul li.incoming {
+  position: relative;
+}
+.all-box ul li.incoming:before {
+  content: "尚未開放";
+  display: block;
+  width: 40%;
+  height: 70px;
+  position: absolute;
+  background: #e51d0ed1;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  color: #fff;
+  margin: 0 auto;
+  font-size: 2em;
+  line-height: 70px;
+  -webkit-transform: translateY(-50%) rotate(-20deg);
+          transform: translateY(-50%) rotate(-20deg);
+  top: 50%;
+}
+.all-box ul li.incoming a {
+  pointer-events: none;
+  cursor: auto;
+}
+
+.special-box {
+  margin: -13% auto 5%;
+}
+.special-box ul {
+  width: 100%;
+  position: absolute;
+  left: 0.5%;
+  right: 0;
+  margin: 0 auto;
+  top: 21%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.special-box ul li {
+  width: 30%;
+  margin: 0 5px 1%;
+}
+.special-box ul li.long {
+  width: 92%;
+}
+.special-box ul li:last-of-type {
+  width: 31.5%;
+}
+.special-box .more-b {
+  width: 20%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -2%;
+}
+
+/*  電腦版其他尺寸 */
+@media screen and (max-width: 1145px) {
+  section {
+    width: 90%;
+  }
+
+  #gaming-container .background {
+    padding-bottom: 49%;
+  }
+
+  .more:hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  section {
+    width: 95%;
+  }
+  section .title {
+    width: 70%;
+  }
+
+  .protitle {
+    width: 70%;
+    height: 180px;
+    line-height: 420%;
+    font-size: 275%;
+  }
+
+  #gaming-container .background {
+    background-size: 120% auto;
+    background-position: -8vmax 4vmax, top;
+    padding-bottom: 61%;
+  }
+  #gaming-container .background .logo {
+    width: 45%;
+    top: 10%;
+  }
+  #gaming-container .background .title {
+    width: 35%;
+    top: 32%;
+    left: 19%;
+  }
+  #gaming-container .background .product {
+    width: 35%;
+    top: 41%;
+    right: 14%;
+  }
+  #gaming-container .background .subtitle {
+    width: 30%;
+    left: 21%;
+    top: 68%;
+  }
+
+  .more {
+    width: 20%;
+  }
+
+  .all-box ul {
+    top: 48%;
+  }
+  .all-box ul.new {
+    top: 37%;
+  }
+
+  .special-box ul {
+    top: 24%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 850px) {
+  #gaming-container .background {
+    background-position: -6vmax 3vmax, top;
+  }
+}
+/* 手機版 */
+@media only screen and (max-width: 768px) {
+  #gaming-container .background {
+    background-position: -9vmin 6vmin, top;
+  }
+
+  .protitle {
+    font-size: 245%;
+    line-height: 409%;
+    height: 160px;
+  }
+
+  .all-box li.incoming:before {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 600px) {
+  .protitle {
+    height: 115px;
+    font-size: 200%;
+    line-height: 360%;
+  }
+
+  #gaming-container .background {
+    background-position: -10vmin 5vmin, top;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .fix_btn {
+    display: block;
+  }
+  .fix_btn .dropdown-menu {
+    display: none;
+  }
+
+  #gaming-container .background {
+    background-size: 180% auto;
+    background-position: -39vmin 10vmin, top;
+    padding-bottom: 195%;
+  }
+  #gaming-container .background .logo {
+    width: 90%;
+    left: 0;
+    top: 5%;
+  }
+  #gaming-container .background .title {
+    width: 85%;
+    top: 19%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  #gaming-container .background .subtitle {
+    width: 65%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 47%;
+  }
+  #gaming-container .background .product {
+    width: 95%;
+    top: 62%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .background2 {
+    background-size: 180% auto;
+    background-position: -38vmin 0, top;
+  }
+
+  .protitle {
+    width: 100%;
+    height: 105px;
+    font-size: 180%;
+    line-height: 365%;
+  }
+
+  section .title {
+    width: 100%;
+    margin: 0 auto -8%;
+  }
+
+  .event-group .content .banner1,
+.event-group .content .banner2 {
+    width: 95%;
+    margin: 0 5px 2%;
+  }
+  .event-group .arrow {
+    width: 15%;
+  }
+
+  .more {
+    width: 35%;
+    font-size: 18px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto 10%;
+  }
+
+  .all-box ul {
+    position: static;
+  }
+  .all-box ul li {
+    width: 95%;
+    margin: 0 5px 3%;
+  }
+  .all-box ul li.incoming:before {
+    font-size: 1.7em;
+    width: 60%;
+  }
+  .all-box .all-bg {
+    display: none;
+  }
+
+  .special-box ul {
+    top: 31%;
+  }
+  .special-box ul li {
+    width: 27%;
+    margin: 0 5px 2%;
+  }
+  .special-box ul li:last-of-type {
+    width: 28.5%;
+  }
+  .special-box ul li.long {
+    width: 88%;
+  }
+  .special-box .more-b {
+    width: 35%;
+    bottom: -3%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .more {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .protitle {
+    height: 85px;
+    font-size: 140%;
+    line-height: 374%;
+  }
+
+  #gaming-container .background {
+    background-position: -39vmin 14vmin, top;
+    padding-bottom: 185%;
+  }
+  #gaming-container .background .logo {
+    top: 6%;
+  }
+  #gaming-container .background .title {
+    top: 20%;
+  }
+  #gaming-container .background .subtitle {
+    top: 49%;
+  }
+  #gaming-container .background .product {
+    top: 63%;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .protitle {
+    height: 215px;
+    line-height: 455%;
+  }
+}
+@media only screen and (min-width: 2500px) {
+  .protitle {
+    height: 10vmax;
+    line-height: 568%;
+  }
+}
