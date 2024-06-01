@@ -1,0 +1,552 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
+@charset "UTF-8";
+/*  共用樣式調整 */
+body {
+  background: #f8ddc4;
+}
+
+body{
+  background: #f8ddc4;
+  
+}
+
+.protitle {
+  width: 62%;
+  height: 185px;
+  font-size: 0;
+  padding-bottom: 8%;
+}
+
+.protitle a{
+  cursor: pointer
+}
+
+.protitle:nth-of-type(1) {
+  background: url("https://events.tk3c.com/events_net/events_net/mi_ecommerce2023/images/title03.png") no-repeat center;
+  background-size: 100% auto;
+}
+
+.protitle:nth-of-type(2) {
+  background: url("https://events.tk3c.com/events_net/events_net/mi_ecommerce2023/images/title04.png") no-repeat center;
+  background-size: 100% auto;
+}
+
+.protitle:nth-of-type(3) {
+  background: url("https://events.tk3c.com/events_net/events_net/mi_ecommerce2023/images/title05.png") no-repeat center;
+  background-size: 100% auto;
+}
+
+.protitle:nth-of-type(4) {
+  background: url("https://events.tk3c.com/events_net/events_net/mi_ecommerce2023/images/title06.png") no-repeat center;
+  background-size: 100% auto;
+}
+
+.protitle:nth-of-type(5) {
+  background: url("https://events.tk3c.com/events_net/events_net/mi_ecommerce2023/images/title07.png") no-repeat center;
+  background-size: 100% auto;
+}
+
+.protitle:nth-of-type(6) {
+  background: url("https://events.tk3c.com/events_net/events_net/mi_ecommerce2023/images/title08.png") no-repeat center;
+  background-size: 100% auto;
+}
+
+.protitle:nth-of-type(7) {
+  background: url("https://events.tk3c.com/events_net/events_net/mi_ecommerce2023/images/title09.png") no-repeat center;
+  background-size: 100% auto; 
+}
+
+
+.bg01 {
+  background: #9bc3ef;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px #e2b38b;
+  margin: 0 auto 10%;
+  padding-bottom: 1.5%;
+}
+
+
+.aside-container .go-top {
+  color: white;
+  background: #ee712e;
+}
+
+
+.aside-container .aside-content li a:hover {
+  background: #ee712e;
+}
+
+section {
+  width: 58%;
+}
+section .title {
+  height: 200px;
+  margin: 0 auto 1%;
+  width: 67%;
+  font-size: 3em;
+  line-height: 4.8em;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0.2em;
+}
+
+.pro .swiper-slide {
+  width: 25% !important;
+}
+
+.swiper-button-prev {
+  background-image: none !important;
+}
+.swiper-button-prev:after {
+  color: #fe7c32;
+}
+
+.swiper-button-next {
+  background-image: none !important;
+}
+.swiper-button-next:after {
+  color: #fe7c32;
+}
+
+.swiper-wrapper {
+  padding-bottom: 10px;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+    top: 20%;
+  }
+
+/* 小米520頁面區 */
+#mieco-container .background {
+  background-image: url("https://events.cdn-tkec.tw/events_net/events_net/mi_ecommerce2023/images/kv_bg.png");
+  background-repeat: no-repeat;
+  background-position: 0 0, top;
+  background-size: 100% auto;
+  padding-bottom: 35.25%;
+  width: 100%;
+  height: 0;
+  position: relative;
+  margin: 0 auto 0;
+  background-position: 0 45px, top;
+}
+
+#mieco-container .background .logo {
+  width: 3.5%;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 26%;
+  left: 22%;
+}
+
+#mieco-container .background .logo618 {
+  width: 6%;
+  height: auto;
+  display: block;
+  position: absolute;
+  left: 14%;
+  top: 45px;
+}
+
+#mieco-container .background .title {
+  width: 27%;
+  position: absolute;
+  left: 22%;
+  top: 44%;
+  z-index: 5;
+
+  animation: zoomIn;
+  animation-duration: 1.5s;
+
+}
+#mieco-container .background .product {
+  width: 58%;
+  position: absolute;
+  right: 14%;
+  top: 4%;
+  animation: slideInRight;
+  animation-duration: 2s;
+}
+
+.nav {
+  width: 80%;
+  margin: 0 auto 0;
+  position: relative;
+  z-index: 3;
+  padding-bottom: 3%;
+}
+.nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.nav ul li {
+  width: 18%;
+  margin: 0 1px;
+}
+.nav ul li a {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.nav ul li a:hover {
+  -webkit-filter: hue-rotate(90deg);
+          filter: hue-rotate(90deg);
+}
+
+.sale-box .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.sale-box .content a {
+  width: 47%;
+  margin: 0 0;
+}
+.sale-box .content a:first-of-type {
+  width: 48%;
+}
+
+.special-box .specials {
+  position: relative;
+}
+.special-box .specials .bg01 {
+  background: none;
+  box-shadow: none
+}
+.special-box li:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.special-box .title {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/mi_ecommerce2023/images/title01.png") no-repeat center;
+  background-size: 100% auto;
+  
+}
+
+.gift-box .title {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/mi_ecommerce2023/images/title02.png") no-repeat center;
+  background-size: 100% auto;
+}
+.gift-box li {
+  width: 100%;
+  margin: 0 4px;
+}
+
+.store {
+  width: 65%;
+  height: auto;
+  display: block;
+  position: relative;
+  margin: 0 auto 2%;
+  overflow: hidden;
+
+  padding-top: 14px;
+  
+}
+
+.store:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+
+
+/*  電腦版其他尺寸 */
+@media only screen and (max-width: 1600px) {
+  section {
+    width: 70%;
+  }
+  .protitle{
+    width: 57%;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  section .title {
+    width: 70%;
+  }
+
+  .protitle{
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  section {
+    width: 75%;
+  }
+
+  .protitle{
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1145px) {
+  section {
+    width: 80%;
+  }
+
+  .nav {
+    width: 70%;
+  }
+
+  
+}
+@media only screen and (max-width: 1025px) {
+  section a:hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: none;
+    transition: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-filter: none;
+            filter: none;
+  }
+
+  .store:hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .protitle {
+    width: 70%;
+    height: 158px;
+    font-size: 0;
+    padding-top: 2%;
+    padding-bottom: 0;
+  }
+
+  body:before {
+    background-size: 150% auto;
+    background-position: center;
+  }
+
+  #mieco-container .background {
+    padding-bottom: 52%;
+    background-position: -30vmin 5vmin, top;
+    background-size: 150% auto;
+  }
+
+  #mieco-container .background .logo {
+    width: 5%;
+    left: 9%;
+    top: 31%;
+  }
+
+  #mieco-container .background .logo618 {
+    width: 8%;
+    left: 7%;
+  }
+
+  #mieco-container .background .title {
+    width: 41%;
+    left: 9%;
+    top: 46%;
+  }
+  #mieco-container .background .product {
+    width: 78%;
+    right: 3%;
+    top: 10%;
+  }
+
+  .pro .swiper-slide {
+    width: 30% !important;
+  }
+
+  section {
+    width: 95%;
+    margin: 0 auto 0;
+    padding-bottom: 5%;
+  
+  }
+  section .title {
+    height: 100px;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .nav ul li {
+    width: 21%;
+  }
+
+  .bg01 {
+    margin: 0 auto 8%;
+  }
+
+  .store {
+    width: 90%;
+  }
+
+  .flowerFloat{
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 800px) {
+  #mieco-container .background {
+    background-position: -10vmax 3vmax, top;
+  }
+
+}
+/* 手機版 */
+@media only screen and (max-width: 768px) {
+  .nav {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 600px) {
+  .pro .swiper-slide {
+    width: 40% !important;
+  }
+
+
+  .protitle {
+    height: 80px;
+    font-size: 2.5em;
+    line-height: 2.1em;
+  }
+
+  .gift-box li {
+    margin: 0 3px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .fix_btn {
+    display: block;
+  }
+  .fix_btn .dropdown-menu {
+    display: none;
+  }
+
+  body:before {
+    background-size: 200% auto;
+    background-position: -40vmin 10vmin, top;
+  }
+
+  section .title {
+    width: 100%;
+    height: 81px;
+  }
+
+  .protitle {
+    width: 100%;
+    height: 150px;
+    font-size: 0;
+  }
+
+  .protitle:before{
+    height: 414px;
+  }
+
+  #mieco-container .background {
+    padding-bottom: 77%;
+    background-position: -29vmin 11vmin, top;
+    background-size: 178% auto;
+  }
+
+  #mieco-container .background .logo {
+    width: 7%;
+    left: 6%;
+    top: 39%;
+  }
+
+  #mieco-container .background .logo618 {
+    width: 12%;
+    left: 27px;
+  }
+
+  #mieco-container .background .title {
+    width: 48%;
+    left: 7%;
+    top: 54%;
+  }
+  #mieco-container .background .product {
+    width: 102%;
+    right: -8%;
+    top: 19%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .pro .swiper-slide {
+    width: 45% !important;
+  }
+
+  .sale-box .content a {
+    width: 95%;
+  }
+  .sale-box .content a:first-of-type {
+    width: 98%;
+  }
+
+  .gift-box li {
+    margin: 0 0px;
+    width: 100%;
+  }
+
+  .item{
+    display:none;
+  }
+
+  
+
+
+}
+@media only screen and (max-width: 376px) {
+  section .title {
+    height: 71px;
+    line-height: 2.3em;
+    font-size: 1.8em;
+  }
+  .protitle {
+    height: 71px;
+    line-height: 1.5em;
+    font-size: 1.8em;
+  }
+ 
+}
+@media only screen and (max-width: 320px) {
+  section .title {
+    height: 50px;
+    font-size: 1em;
+  }
+
+  .protitle {
+    height: 50px;
+    font-size: 1em;
+  }
+}
