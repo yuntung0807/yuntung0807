@@ -1,0 +1,467 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
+@charset "UTF-8";
+/*  共用樣式調整 */
+body {
+  background: #e3e3e2;
+}
+
+.rightbtn {
+  display: none !important;
+}
+
+form#form1 {
+  position: relative;
+}
+form#form1:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/dyson2306/images/bg.png") repeat-y center;
+  background-size: 100% auto;
+  background-position: 0 0, top;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  top: 0;
+}
+
+.protitle {
+  width: 60%;
+  height: 180px;
+  font-size: 0;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/dyson2306/images/title07.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle a {
+  height: auto;
+}
+
+.bg01 {
+  background: #efd988;
+}
+
+section {
+  width: 60%;
+  margin: 0 auto 8%;
+}
+section .title {
+  width: 60%;
+  height: auto;
+  margin: 0 auto 0%;
+}
+section a {
+  width: 75%;
+}
+section a.no {
+  pointer-events: none;
+  cursor: auto;
+}
+section a.no:hover {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: none;
+  transition: none;
+}
+
+.store {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto 3%;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+}
+.store:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+/* dyson新品上市頁面區 */
+#dyson-container {
+  width: 100%;
+  margin: 0 auto 0;
+  position: relative;
+}
+#dyson-container .background {
+  background-image: url("https://events.cdn-tkec.tw/events_net/events_net/dyson2306/images/kv.png");
+  background-repeat: no-repeat;
+  background-position: 0 0, top;
+  background-size: 100% auto;
+  padding-bottom: 42.4%;
+  width: 100%;
+  height: 0;
+  position: relative;
+  margin: 0 auto 0;
+  background-position: 0 45px, top;
+  padding-bottom: 46%;
+}
+#dyson-container .background .logo {
+  width: 6%;
+  height: auto;
+  display: block;
+  position: absolute;
+  left: 14%;
+  top: 45px;
+}
+#dyson-container .background .title {
+  width: 25%;
+  position: absolute;
+  left: 24%;
+  margin: 0 auto;
+  top: 15%;
+}
+
+#dyson-container .background a {
+  width: 9%;
+  position: absolute;
+  left: 30%;
+  margin: 0 auto;
+  top: 70%;
+
+  animation-duration: 2s, 1s;
+  animation-iteration-count: infinite;
+}
+
+.special-box ul {
+  width: 90%;
+}
+.special-box li {
+  width: 48%;
+  margin: 0 -5% 2%;
+}
+.special-box li.long {
+  width: 100%;
+}
+.special-box li.time {
+  width: 98%;
+  position: relative;
+}
+.special-box li.time .timearea {
+  position: absolute;
+  top: 5%;
+  font-size: 1.5em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  font-weight: bold;
+}
+.special-box li.time .timearea i {
+  padding-left: 20px;
+  font-size: 2em;
+}
+.special-box li.time .timearea span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.youtube {
+  height: 0;
+  padding-bottom: 26%;
+  position: relative;
+  margin: 0 5px;
+}
+.youtube iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto 0;
+  top: 0;
+}
+
+.people-group .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 75%;
+}
+.people-group .youtube {
+  width: 47%;
+  margin: 0 5px;
+}
+
+.info-group .youtube {
+  width: 70%;
+  padding-bottom: 40%;
+  margin: 0 auto 2%;
+}
+.info-group .content {
+  width: 70%;
+  margin: 0 auto 0;
+}
+
+.other-group .address {
+  margin: 0 auto 5%;
+}
+
+/*  電腦版其他尺寸 */
+@media screen and (max-width: 1600px) {
+  .special-box li.time .timearea {
+    top: 3%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  #dyson-container .background {
+    padding-bottom: 50%;
+  }
+
+  .special-box li.time .timearea {
+    top: 9%;
+    font-size: 1.2em;
+  }
+  .special-box li.time .timearea i {
+    font-size: 1em;
+  }
+  .special-box li.time .timearea span {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 1145px) {
+  section {
+    width: 80%;
+  }
+
+  .store a:hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  section {
+    width: 95%;
+    margin: 0 auto 10%;
+  }
+  section .title {
+    width: 90%;
+  }
+  section a {
+    width: 100%;
+  }
+
+  #dyson-container .background {
+    padding-bottom: 63%;
+    background-size: 120% auto;
+    background-position: -10vmax 5vmax, top;
+  }
+  #dyson-container .background .logo {
+    width: 8%;
+    left: 4%;
+  }
+  #dyson-container .background .title {
+    width: 35%;
+    top: 12%;
+    left: 15%;
+  }
+
+  .protitle {
+    width: 90%;
+    height: 230px;
+  }
+
+  .store {
+    width: 95%;
+  }
+
+  .info-group .content {
+    width: 100%;
+  }
+  .info-group .youtube {
+    width: 100%;
+    padding-bottom: 56%;
+  }
+
+  .special-box li {
+    margin: 0 1% 2%;
+  }
+  .special-box li.time .timearea {
+    font-size: 1.5em;
+  }
+  .special-box li.time .timearea i {
+    font-size: 1.2em;
+  }
+  .special-box li.time .timearea span {
+    font-size: 1.2em;
+  }
+  .special-box ul {
+    width: 100%;
+  }
+
+  .people-group .content {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 850px) {
+  #dyson-container .background {
+    background-position: -9vmax 3vmax, top;
+  }
+}
+/* 手機版 */
+@media only screen and (max-width: 768px) {
+  #dyson-container .background {
+    background-position: -11vmin 6vmin, top;
+  }
+  #dyson-container .background .title {
+    top: 14%;
+  }
+
+  .protitle {
+    height: 190px;
+  }
+
+  .special-box li.time .timearea {
+    top: 8%;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 600px) {
+  .protitle {
+    height: 140px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .fix_btn {
+    display: block;
+  }
+  .fix_btn .dropdown-menu {
+    display: none;
+  }
+
+  .copyR {
+    margin-bottom: 0;
+  }
+
+  #dyson-container .background {
+    padding-bottom: 90%;
+    background-size: 180% auto;
+    background-position: -41vmin 46px, top;
+  }
+  #dyson-container .background .logo {
+    width: 12%;
+    left: 5px;
+  }
+  #dyson-container .background .title {
+    width: 47%;
+    top: 19%;
+    left: 15%;
+  }
+
+  #dyson-container .background a {
+    width: 22%;
+    left: 15%;
+    margin: 0 auto;
+    top: 74%;
+  }
+
+  .protitle {
+    width: 100%;
+    height: 120px;
+  }
+
+  section {
+    margin: 0 auto 15%;
+  }
+  section .title {
+    width: 100%;
+  }
+
+  .special-box li.time .timearea {
+    top: 7%;
+    font-size: 1.2em;
+  }
+  .special-box li.time .timearea span {
+    font-size: 1em;
+  }
+  .special-box li.time .timearea i {
+    font-size: 1em;
+    padding-left: 5px;
+  }
+
+  .people-group .content .youtube {
+    width: 95%;
+    margin: 0 5px 2%;
+    padding-bottom: 60%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .special-box li.time .timearea {
+    font-size: 1em;
+  }
+  .special-box li.time .timearea span {
+    font-size: 1em;
+  }
+  .special-box li.time .timearea i {
+    font-size: 1.2em;
+  }
+
+  .protitle {
+    height: 80px;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .special-box li.time .timearea {
+    top: 9%;
+  }
+}
+@-webkit-keyframes light-slow-move {
+  40% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+}
+@keyframes light-slow-move {
+  40% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes move-to-left2 {
+  0% {
+    -webkit-transform: translateX(300%);
+            transform: translateX(300%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes move-to-left2 {
+  0% {
+    -webkit-transform: translateX(300%);
+            transform: translateX(300%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
