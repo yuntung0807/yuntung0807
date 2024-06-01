@@ -1,0 +1,771 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
+@charset "UTF-8";
+/*  共用樣式調整 */
+body {
+  background: #52c0fc;
+  position: relative;
+}
+body:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/summerhotout/images/bg.jpg") no-repeat center;
+  background-size: 100% auto;
+  background-position: 0 36vmax, top;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -3;
+  top: 0.5%;
+}
+
+body:after {
+  content: "";
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/summerhotout/images/fence.png") no-repeat center;
+  background-size: 100% auto;
+  background-position: 0 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 4;
+  top: 92%;
+}
+
+
+.protitle {
+  width: 60%;
+  font-size: 0;
+  z-index: 1;
+}
+.protitle:nth-of-type(1) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/summerhotout/images/f01.png") no-repeat center;
+  background-size: 100% auto;
+}
+
+.protitle:nth-of-type(2) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/summerhotout/images/f02.png") no-repeat center;
+  background-size: 100% auto;
+}
+
+.protitle:nth-of-type(3) {
+    background: url("https://events.cdn-tkec.tw/events_net/events_net/summerhotout/images/f03.png") no-repeat center;
+    background-size: 100% auto;
+}
+
+.protitle:nth-of-type(4) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/summerhotout/images/f04.png") no-repeat center;
+  background-size: 100% auto;
+}
+
+.protitle:nth-of-type(5) {
+    background: url("https://events.cdn-tkec.tw/events_net/events_net/summerhotout/images/f05.png") no-repeat center;
+    background-size: 100% auto;
+}
+
+.protitle:nth-of-type(6) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/summerhotout/images/f06.png") no-repeat center;
+  background-size: 100% auto;
+}
+
+.protitle:nth-of-type(7) {
+    background: url("https://events.cdn-tkec.tw/events_net/events_net/summerhotout/images/f07.png") no-repeat center;
+    background-size: 100% auto;
+}
+
+.bg01 {
+  background: none;
+}
+
+section {
+  width: 55%;
+}
+section .title {
+  width: 55%;
+  height: auto;
+  margin: 1% auto 3%;
+  padding-top: 2%;
+}
+
+section a:hover {
+    -webkit-filter: brightness(1.06);
+    filter: brightness(1.06);
+}
+
+
+.item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -2;
+    top: 0;
+  }
+
+/* summerout頁面區 */
+#summerout-container {
+  width: 100%;
+  margin: 0 auto 0;
+  position: relative;
+}
+#summerout-container .background {
+  background-image: url("https://events.cdn-tkec.tw/events_net/events_net/summerhotout/images/kv_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 100%;
+  height: 0;
+  position: relative;
+  margin: 0 auto 0;
+  background-position: 0 45px, top;
+  padding-bottom: 45%;
+  z-index: 2;
+}
+#summerout-container .background .logo {
+  width: 6%;
+  height: auto;
+  display: block;
+  position: absolute;
+  left: 24%;
+  top: 45px;
+}
+#summerout-container .background .title {
+  width: 40%;
+  position: absolute;
+  left: 0;
+  right: 1%;
+  margin: 0 auto;
+  top: 10%;
+  z-index: 6;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+#summerout-container .background .title img{
+    -webkit-animation: TIMERLan 0.25s infinite alternate linear;
+    animation: TIMERLan 0.25s infinite alternate linear;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+@keyframes TIMERLan{
+    0% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(0.95);
+        -moz-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        -o-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+}
+
+#summerout-container .background p{
+    position: absolute;
+}
+
+#summerout-container .background .product_middle {
+    width: 56%;
+    left: 22%;
+    top: 64%;
+
+    -webkit-animation: slowMove2 5s ease-in-out infinite alternate;
+    animation: slowMove2 5s ease-in-out infinite alternate;
+}
+
+#summerout-container .background .product_left {
+    width: 43%;
+    left: 0%;
+    top: 21%;
+    z-index: 2;
+
+    -webkit-animation: slowMove 5s ease-in-out infinite alternate;
+    animation: slowMove 5s ease-in-out infinite alternate;
+}
+
+#summerout-container .background .product_right {
+    width: 43%;
+    left: 55%;
+    top: 16%;
+    z-index: 2;
+    
+    -webkit-animation: slowMove 5s ease-in-out infinite alternate;
+    animation: slowMove 5s ease-in-out infinite alternate;
+}
+
+@keyframes slowMove{
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    50% {
+        -webkit-transform: translateX(-1%);
+        transform: translateX(-1%);
+    }
+    100% {
+        -webkit-transform: translateX(1%);
+        transform: translateX(1%);
+    }
+}
+
+@keyframes slowMove2{
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    50% {
+        -webkit-transform: translateX(1%);
+        transform: translateX(1%);
+    }
+    100% {
+        -webkit-transform: translateX(-1%);
+        transform: translateX(-1%);
+    }
+}
+
+
+#summerout-container .background .light_left {
+    width: 60%;
+    left: -1%;
+    top: 4%;
+}
+
+#summerout-container .background .light_left img{
+    -webkit-animation: lights 3s linear infinite;
+    animation: lights 3s linear infinite;
+    animation-delay: 1.2s;
+}
+
+#summerout-container .background .light_right {
+    width: 68%;
+    left: 33%;
+    top: 4%;
+}
+
+#summerout-container .background .light_right img{
+    -webkit-animation: lights 3s linear infinite;
+    animation: lights 3s linear infinite;
+    animation-delay: 1.2s;
+}
+
+
+@keyframes lights{
+    0%, 12%, 18%, 24%, 6%, 100% {
+        opacity: 0.7;
+    }
+    15%, 21%, 3%, 9% {
+        opacity: 1;
+    }
+}
+
+
+.bank-group {
+  margin: 0 auto 5%;
+}
+
+.special-box li {
+  width: 45%;
+  margin: 8px 6px;
+  z-index: 3;
+}
+
+.special-box .fascia {
+    width: 91%;
+}
+
+.special-box .long {
+  width: 91%;
+}
+
+.special-box .longer {
+  width: 91%;
+}
+
+
+.product-box .title{
+  width: 65%;
+}
+
+
+.sp-area ul{
+  background-color: #ffec35;
+  border-radius: 40px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: #fff9c5 3px 3px 15px 0px inset;
+}
+.sp-area .all{
+  width: 50%;
+}
+
+.sp-area .board{
+  width: 100%;
+  display: flex;
+
+  /* width: 50%; */
+}
+
+
+.sp-area .new{
+  padding: 0px;
+  padding-top: 15px;
+}
+
+.sp-area .new li{
+  width: 48%;
+  position: relative;
+  margin: 0 5px 2%;
+}
+
+.sp-area .new .book{
+  width: 40%;
+  position: ABSOLUTE;
+  left: 0;
+  right: 0;
+  margin: 0 AUTO;
+  bottom: -7%;
+}
+
+.sp-area .new .short{
+  width: 47%;
+}
+
+.sp-area .short a{
+  margin-bottom: 3%;
+}
+
+
+#banner-area{
+  background-color: rgb(255 255 255 / 59%);
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 40px;
+  box-shadow: #ffffff 3px 3px 15px 0px inset;
+}
+.special-box ul  {
+  position: relative;
+}
+
+.special-box li.finish,
+.special-box li.fascia{
+    position: relative;
+}
+
+.special-box li.finish:before,
+.special-box li.fascia:before{
+    content: "已結束";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #0000009c;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    color: yellow;
+    margin: 0 auto;
+    font-size: 3em;
+    line-height: 55px;
+    border-radius: 10px;
+    white-space: pre;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+
+/*  電腦版其他尺寸 */
+@media only screen and (max-width: 1600px) {
+  section .title {
+    width: 55%;
+    }
+
+  .sp-area .title{
+    width: 75%;
+  }
+
+  body:after{
+    top: 94%;
+  }
+
+  .special-box ul li.incom::before{
+    left: 405px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  section {
+    width: 60%;
+  }
+
+  .list_F{
+    width: 98%;
+  }
+
+  .list_M{
+    width: 98%;
+  }
+
+
+
+}
+@media screen and (max-width: 1145px) {
+  section {
+    width: 60%;
+  }
+
+  .protitle {
+    width: 62%;
+  }
+  .protitle:hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  #summerout-container .background {
+    padding-bottom: 45%;
+  }
+  #summerout-container .background .title {
+    top: 19%;
+  }
+  #summerout-container .background .subtitle {
+    top: 22%;
+  }
+
+  #summerout-container .background .product{
+    top: 13%;
+  }
+
+  #summerout-container .background .wind{
+    top: 25%;
+  }
+
+
+  .special-box{
+    width: 70%;
+  }
+
+  body:before{
+    top: 0.5%;
+    background-size: 130% auto; 
+    background-position: -26vmax 36vmax, top; 
+  }
+
+
+}
+@media only screen and (max-width: 992px) {
+  section {
+    width: 92%;
+    margin-bottom: 7%;
+  }
+  section .title {
+    width: 65%;
+    padding-bottom: 1%;
+  }
+
+  .item{
+    display: none !important;
+  }
+
+
+  .sp-area{
+    width: 95%;
+  }
+
+
+  .sp-area ul{
+    padding: 17px;
+  }
+
+  .sp-area .all{
+    width: 100%;
+  }
+  
+  .sp-area .board{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  
+  #summerout-container .background {
+    padding-bottom: 64%;
+    background-size: 140% auto;
+    background-position: -21vmax 4vmax, top;
+  }
+  #summerout-container .background .logo {
+    width: 13%;
+    left: 3%;
+  }
+  #summerout-container .background .title {
+    width: 60%;
+    top: 12%;
+    right: 7%;
+  }
+
+  #summerout-container .background .product_middle {
+    width: 72%;
+    left: 19%;
+    top: 70%;
+}
+
+#summerout-container .background .product_left {
+    width: 47%;
+    left: -6%;
+    top: 40%;
+}
+
+#summerout-container .background .product_right {
+    width: 50%;
+    left: 59%;
+    top: 22%;
+}
+ 
+
+  .protitle {
+    width: 80%;
+  }
+
+  .product-box .title {
+    width: 80%;
+}
+
+  .special-box{
+    width: 100%;
+  }
+
+  body:before{
+    top: 0%;
+    background-size: 150% auto;
+    background-position: -15vmax 44vmax, top;
+  }
+
+  body:after{
+    top: 96%;
+  }
+
+  .special-box li.finish:before,
+  .special-box li.fascia:before{
+    font-size: 1.5em;
+  }
+
+  
+}
+@media only screen and (min-width: 769px) and (max-width: 850px) {
+
+  .protitle {
+    height: 130px;
+  }
+}
+/* 手機版 */
+@media only screen and (max-width: 768px) {
+
+
+  .list_F {
+    width: 95%;
+  }
+
+  .list_M {
+    width: 98%;
+ }
+
+ body:before{
+    background-position: -15vmax 45vmax, top;
+  }
+
+ body:after{
+    display: none;
+}
+
+}
+@media only screen and (min-width: 577px) and (max-width: 600px) {
+  .protitle {
+    height: 105px;
+  }
+
+  #summerout-container .background {
+    background-position: -13vmin 7vmin, top;
+  }
+
+  .sp-area .board a{
+    margin: 8px 0px;
+  }
+
+  body:before{
+    background-position: -15vmax 36vmax, top;
+  }
+
+
+
+}
+@media only screen and (max-width: 576px) {
+  .fix_btn {
+    display: block;
+  }
+  .fix_btn .dropdown-menu {
+    display: none;
+  }
+
+  #summerout-container .background {
+    padding-bottom: 85%;
+    background-size: 188% auto;
+    background-position: -54vmin 7vmin, top;
+  }
+  #summerout-container .background .logo {
+    width: 15%;
+    left: 3px;
+  }
+  #summerout-container .background .title {
+    width: 70%;
+    top: 17%;
+    left: 3%
+  }
+
+  #summerout-container .background .product_middle {
+    width: 78%;
+    left: 15%;
+}
+
+  #summerout-container .background .product_left {
+    width: 51%;
+    left: -8%;
+    top: 55%;
+}
+
+#summerout-container .background .product_right {
+    width: 55%;
+    left: 58%;
+    top: 50%;
+}
+
+  #summerout-container .background .light_left{
+    top: 10%;
+  }
+
+  #summerout-container .background .light_right{
+    top: 10%;
+  }
+
+  .protitle {
+    width: 95%;
+    height: 75px;
+  }
+
+  section .title {
+    width: 70%;
+  }
+
+  .special-box{
+    width: 100%;
+  }
+
+  .special-box li {
+    width: 45%;
+    margin: 3px 2px;
+  }
+
+  .special-box .long {
+    width: 92%;
+  }
+
+  .special-box .longer {
+    width: 92%;
+  }
+
+
+  .gotop-mobile{
+    background: url("https://events.tk3c.com/events_net/events_net/tk3cgroup/images/230619/gotop.png") no-repeat;
+    background-size: 50px 50px;
+    bottom: 9px;
+  }
+
+  .list_M {
+    width: 100%;
+  }
+
+  .list_F{
+    width: 100%;
+  }
+
+  #banner-area{
+    border-radius: 20px;
+  }
+
+  .sp-area .title {
+    width: 85%;
+  }
+
+  .sp-area ul{
+    padding: 7px;
+    border-radius: 20px;
+  }
+
+  .sp-area .board a{
+    margin: 5px 2px;
+  }
+
+  .sp-area .new {
+    width: 90%;
+    padding: 3%;
+  }
+
+  .sp-area .new li{
+    width: 100%;
+    padding-top: 2%;
+  }
+
+  body:before {
+    background-size: 160% auto;
+    background-position: -13vmax 39vmax, top;
+}
+
+.product-box .title {
+    width: 88%;
+}
+
+.sp-area .new .short {
+  width: 100%;
+}
+
+.special-box li.finish:before,
+.special-box li.fascia:before{
+  font-size: 1.3em;
+}
+
+}
+@media only screen and (max-width: 360px) {
+  .protitle {
+    height: 70px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #summerout-container .background {
+    background-position: -37vmin 14vmin, top;
+  }
+
+  .protitle {
+    height: 65px;
+  }
+}
+@media only screen and (min-width: 2500px) {
+  .protitle {
+    height: 200px;
+  }
+}
