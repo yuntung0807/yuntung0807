@@ -1,0 +1,455 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
+@charset "UTF-8";
+/*  共用樣式調整 */
+body {
+  background: #fff;
+  position: relative;
+}
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/valentineForGirl/images/bg.jpg") no-repeat center;
+  background-size: 100% auto;
+  background-position: 0 45px, top;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  top: 0;
+}
+
+.protitle {
+  width: 60%;
+  height: 220px;
+  font-size: 0;
+}
+.protitle:nth-of-type(1) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/valentineForGirl/images/s2.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(2) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/valentineForGirl/images/s3.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(3) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/valentineForGirl/images/s4.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(4) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/valentineForGirl/images/s5.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(5) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/valentineForGirl/images/s6.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(6) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/valentineForGirl/images/s7.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle:nth-of-type(7) {
+  background: url("https://events.cdn-tkec.tw/events_net/events_net/valentineForGirl/images/s8.png") no-repeat center;
+  background-size: 100% auto;
+}
+.protitle a {
+  height: auto;
+}
+
+.bg01 {
+  margin: 0 auto 2%;
+}
+.bg01:nth-of-type(odd) {
+  background: #f46bc7;
+}
+.bg01:nth-of-type(even) {
+  background: #f20096;
+}
+
+.more {
+  width: 15%;
+  height: 35px;
+  display: block;
+  background: #8b77fa;
+  color: #fff;
+  margin: 0 auto 5%;
+  padding: 5px;
+  font-size: 25px;
+  line-height: 33px;
+  font-weight: bold;
+  border-radius: 20px;
+  position: relative;
+  z-index: 5;
+}
+.more:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+  color: #fff;
+}
+
+section {
+  width: 45%;
+}
+section .title {
+  width: 100%;
+  height: auto;
+  margin: 0 auto 2%;
+}
+
+#particle_canvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.item {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
+  z-index: -1;
+}
+
+/* 七夕價給你-她最想要的禮物*/
+#valentine-container {
+  width: 100%;
+  margin: 0 auto 0;
+  position: relative;
+}
+#valentine-container .background {
+  background-image: url("../images/kv_bg.png");
+  background-repeat: no-repeat;
+  background-position: 0 0, top;
+  background-size: 100% auto;
+  padding-bottom: 41.15%;
+  width: 100%;
+  height: 0;
+  position: relative;
+  margin: 0 auto 0;
+  background-position: 0 45px, top;
+  padding-bottom: 48%;
+}
+#valentine-container .background .logo {
+  width: 6%;
+  height: auto;
+  display: block;
+  position: absolute;
+  left: 24%;
+  top: 45px;
+}
+#valentine-container .background .title {
+  width: 40%;
+  position: absolute;
+  top: 15%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  -webkit-animation: big-after-small 1.8s linear;
+          animation: big-after-small 1.8s linear;
+}
+#valentine-container .background .balloon {
+  width: 15%;
+  position: absolute;
+  -webkit-animation: upAndDown 0.9s linear infinite alternate;
+          animation: upAndDown 0.9s linear infinite alternate;
+  right: 3%;
+  top: 11%;
+}
+
+.gift-box ul {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+.gift-box ul li {
+  width: 32.5%;
+  margin: 0 -5px 0;
+}
+.gift-box ul li.sub {
+  width: 64%;
+}
+.gift-box ul li.fb {
+  width: 32.5%;
+}
+
+.event-box .content {
+  width: 100%;
+  margin: 0 auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.event-box .content .banner1,
+.event-box .content .banner2 {
+  width: 45%;
+  margin: 0 10px;
+}
+
+.all-box ul {
+  width: 100%;
+  position: absolute;
+  left: -1.5%;
+  right: 0;
+  margin: 0 auto;
+  top: 27%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.all-box li {
+  width: 37%;
+  margin: 0 5px 2%;
+}
+.all-box li.long {
+  width: 76%;
+}
+
+.sale-group {
+  width: 1144px;
+}
+.sale-group .sale {
+  width: 100%;
+  position: relative;
+}
+.sale-group .sale .swiper-slide {
+  margin: 0 0;
+}
+.sale-group .sale .bg01 {
+  background: #f30096;
+}
+.sale-group .sp {
+  overflow: hidden;
+}
+.sale-group .title {
+  width: 60%;
+}
+
+.bank-group {
+  margin: 0 auto 5%;
+}
+
+/*  電腦版其他尺寸 */
+@media screen and (max-width: 1440px) {
+  .protitle {
+    width: 70%;
+  }
+
+  section {
+    width: 60%;
+  }
+
+  .sale-group .title {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .protitle {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1145px) {
+  section {
+    width: 80%;
+  }
+  section .title {
+    width: 80%;
+  }
+
+  .sale-group {
+    width: 95%;
+  }
+
+  .all-box ul {
+    top: 24%;
+  }
+
+  .more:hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  section {
+    width: 95%;
+  }
+  section .title {
+    width: 95%;
+    margin: 0 auto 3%;
+  }
+
+  #valentine-container .background {
+    padding-bottom: 55%;
+  }
+  #valentine-container .background .logo {
+    width: 8%;
+    left: 17%;
+  }
+
+  .protitle {
+    width: 100%;
+    height: 275px;
+  }
+
+  .all-box ul {
+    top: 26%;
+  }
+
+  .sale-group .title {
+    width: 95%;
+  }
+
+  .more {
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 850px) {
+  .protitle {
+    height: 235px;
+  }
+}
+/* 手機版 */
+@media only screen and (max-width: 768px) {
+  .protitle {
+    height: 230px;
+  }
+
+  .more {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 600px) {
+  .protitle {
+    height: 175px;
+  }
+
+  #valentine-container .background .title {
+    top: 19%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .fix_btn {
+    display: block;
+  }
+  .fix_btn .dropdown-menu {
+    display: none;
+  }
+
+  #valentine-container .background {
+    padding-bottom: 95%;
+    background-size: 180% auto;
+    background-position: -48vmin 11vmin, top;
+  }
+  #valentine-container .background .logo {
+    width: 15%;
+    left: 0;
+    z-index: 2;
+  }
+  #valentine-container .background .title {
+    top: 19%;
+    width: 75%;
+  }
+  #valentine-container .background .balloon {
+    top: 42%;
+    width: 25%;
+    left: -6%;
+    right: unset;
+  }
+
+  .protitle {
+    width: 100%;
+    height: 130px;
+  }
+
+  section .title {
+    width: 100%;
+    margin: 0 auto 4%;
+  }
+
+  .all-box .all-bg {
+    display: none;
+  }
+  .all-box ul {
+    position: static;
+    background: #fefcfc;
+    border: 4px solid #f741bc;
+    border-radius: 20px;
+    padding-top: 2%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .all-box ul li {
+    width: 95%;
+    margin: 0 5px 3%;
+  }
+  .all-box ul li.long {
+    width: 94%;
+  }
+
+  .event-box .event-bg {
+    display: none;
+  }
+  .event-box .content .banner1,
+.event-box .content .banner2 {
+    width: 95%;
+    margin: 0 5px 2%;
+  }
+
+  .gift-box ul li {
+    width: 50%;
+    margin: 0 -2px 0;
+  }
+  .gift-box ul li.sub {
+    width: 100%;
+  }
+  .gift-box ul li.fb {
+    width: 50%;
+  }
+
+  .more {
+    width: 35%;
+    font-size: 18px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto 10%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .protitle {
+    height: 115px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .protitle {
+    height: 100px;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .sale-group {
+    width: 60%;
+  }
+
+  .protitle {
+    height: 11vmax;
+  }
+}
