@@ -152,7 +152,7 @@ section a{
 .bonus-area {
   width: 100%;
   margin: -19% auto 5%;
-  background-image: url("https://events.cdn-tkec.tw/events_net/events_net/202304_cookmom/images/bg02.png");
+  background-image: url("../images/bg02.png");
   background-repeat: no-repeat;
   padding-top: 30px;
   z-index: 0;
