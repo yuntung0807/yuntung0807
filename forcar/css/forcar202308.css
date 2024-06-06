@@ -62,6 +62,10 @@ a:hover {
   color: unset;
 }
 
+section .title {
+  margin: 0 auto 0;
+
+}
 
 /*  共用樣式調整 */
 body {
@@ -75,7 +79,7 @@ body:before {
   height: 100%;
   background: url("https://events.tk3c.com/events_net/events_net/FORCAR/images/202308/bg.png") no-repeat center;
   background-size: 100% auto;
-  background-position: 0 57%, top;
+  background-position: 0 17%, top;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -323,18 +327,14 @@ section a:hover {
 
 /*  電腦版其他尺寸 */
 @media only screen and (min-width: 2000px) {
-  .event-group .title {
-    height: 74.8vmin;
-  }
+  
 }
 @media screen and (max-width: 1700px) {
   section {
     width: 70%;
   }
 
-  .event-group .title {
-    height: 21.8vmax;
-  }
+  
 }
 @media screen and (max-width: 1600px) {
   .protitle {
@@ -354,18 +354,13 @@ section a:hover {
     width: 84%;
   }
 
-  .event-group .title {
-    height: 26.6vmax;
-  }
+  
 }
 @media screen and (max-width: 1280px) {
   section {
     width: 92%;
   }
 
-  .event-group .title {
-    height: 19.5vmax;
-  }
 }
 @media screen and (max-width: 1145px) {
   .bg01:before {
@@ -387,7 +382,7 @@ section a:hover {
 @media only screen and (max-width: 980px) {
   body:before{
     background-size: 110% auto;
-    background-position: 0 104%, top;
+    background-position: 0 4%, top;
   }
 
   #car-container .background {
@@ -462,9 +457,7 @@ section a:hover {
     background-position: -8vmax 45px, top;
   }
 
-  .event-group .title {
-    height: 18vmax;
-  }
+ 
 }
 /* 手機版 */
 @media only screen and (max-width: 768px) {
@@ -483,9 +476,6 @@ section a:hover {
     height: 90px;
   }
 
-  .event-group .title {
-    height: 13.5rem;
-  }
 }
 @media only screen and (min-width: 577px) and (max-width: 600px) {
   .list_F li .boxF_price strong {
@@ -501,9 +491,7 @@ section a:hover {
     width: 100%;
   }
 
-  .event-group .title {
-    height: 12rem;
-  }
+ 
 }
 @media only screen and (max-width: 576px) {
   .fix_btn {
@@ -584,7 +572,7 @@ section a:hover {
   }
   .event-group .title {
     width: 100%;
-    height: 7.7rem;
+    height: 6.7rem;
     margin: 0 auto;
   }
 }
@@ -593,9 +581,6 @@ section a:hover {
     height: 80px;
   }
 
-  .event-group .title {
-    height: 7rem;
-  }
 }
 @media only screen and (max-width: 320px) {
   .protitle {
@@ -607,9 +592,7 @@ section a:hover {
     left: -45% !important;
   }
 
-  .event-group .title {
-    height: 7.5rem;
-  }
+
 }
 @-webkit-keyframes moveToRight {
   0% {
